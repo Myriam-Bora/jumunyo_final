@@ -16,11 +16,15 @@
 		<typeAlias type="com.finalp.jumunyo.vo.ReviewVO" alias="reviewVo"></typeAlias>
 		<typeAlias type="com.finalp.jumunyo.vo.RoomVO" alias="roomVo"></typeAlias>
 		<typeAlias type="com.finalp.jumunyo.vo.SeatOrderVO" alias="seatorderVo"></typeAlias>
+		<typeAlias type="com.finalp.jumunyo.model.RestaurantRequest" alias="restaurantRequest"></typeAlias>
+		<typeAlias type="com.finalp.jumunyo.model.QuestionRequest" alias="questionRequest"></typeAlias>
+		<typeAlias type="com.finalp.jumunyo.model.LoginRequest" alias="loginRequest"></typeAlias>
 	</typeAliases>
 	
 	<!--sql문이 있는 xml을 읽는다.  -->
 	<mappers>
 		<mapper resource="Customer.xml" />
 		<mapper resource="Business.xml" />
+		<mapper resource="Manager.xml" />
 	</mappers>
 </configuration>

@@ -12,6 +12,22 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 	
+	<interceptors>
+		<interceptor>
+			<mapping path="/questionList"/>
+			<mapping path="/answerQuestionList"/>
+			<mapping path="/getQuestion"/>
+			<mapping path="/insertQuestion"/>
+			<mapping path="/userList"/>
+			<mapping path="/userInformation"/>
+			<mapping path="/updateUser"/>
+			<mapping path="/businessList"/>
+			<mapping path="/businessInformation"/>
+			<mapping path="/businessAcknowledge"/>
+			<beans:bean class="com.finalp.jumunyo.common.AuthInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
 	<default-servlet-handler/>
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->

@@ -215,7 +215,8 @@
 				</div>					
 			</div>	
 			</c:when>
-			<c:when test="${questionList1.question_check == '답변완료'}">	
+		<c:when test="${questionList1.question_check == '답변완료'}">
+			<%-- <c:when test="${questionList1.user_id_send == '0'}">	 --%>
 			<div class="tabletd">				
 				<div class="orderId">
 				<a href="#check${status.count}" rel=modal:open style="text-decoration: none;">${questionList1.question_id }</a> <!-- 여기는 문의번호 출력하는곳 -->

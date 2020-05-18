@@ -19,13 +19,6 @@
 	<input type="submit" value="메인페이지" />
 </form>
 
-<!--상세페이지  -->
-<form action="restaurant_detail.do">
-	<input type="submit" value="상세페이지" />
-</form>
-
-
-
 <!-- 세현임시 -->
 <hr>
 
@@ -64,6 +57,14 @@
 <form action="go_revenue_table">
 	<input type="submit" value="매장 매출현황 가자~~">
 </form>
+
+<hr />
+	<!-- 매니저 임시 -->
+	<a href="login">로그인</a> <br />
+	<a href="userList">회원 목록</a> <br />
+	<a href="businessList">입점 승인</a> <br />
+	<a href="answerQuestionList">1 대 1 문의 보기</a> <br />
+	<a href="questionList">1 대 1 문의 작성</a> <br />
 
 </body>
 </html>

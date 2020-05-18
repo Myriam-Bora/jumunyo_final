@@ -217,7 +217,7 @@
 				</div>
 						
 				<div class="seatImg">		
-					<img src="image/table.jpg" style="opacity: <%=opacity %>;" />
+					<img src="resources/image/table.jpg" style="opacity: <%=opacity %>;" />
 					<a>좌석수:</a>
 					<b><%=room_list1.get(i).getRoom_number() %></b>
 					인석
@@ -229,7 +229,7 @@
 		<div class="reservate">
 			<div class="reservate-date">
 				&nbsp;&nbsp;&nbsp;&nbsp;예약날짜:
-				<img src="image/calendar.png" width="20px" height="20px" />
+				<img src="resources/image/calendar.png" width="20px" height="20px" />
 				<input type="date" name="booking_date" />
 			</div>
 			

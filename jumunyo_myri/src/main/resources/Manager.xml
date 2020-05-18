@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Manager">
+
+	<select id="loginCheck" resultType="userVo">
+		select * from users 
+		where user_account = #{user_id} 
+		and user_password = #{user_password} 
+		and user_level = 0
+	</select>  
+	
+	<select id="countQuestion" resultType="int">
+		SELECT COUNT(*) FROM questions where question_check = '답변대기'
+	</select>
+	
+	<select id="selectQuestionList" resultType="questionRequest">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT q.question_id, c.question_category_name, q.question_title, u.user_name, q.question_date, q.question_check
+							FROM users u, questions q, question_categories c
+							where q.question_check = '답변대기' and u.user_id = q.user_id_send and q.question_category_id = c.question_category_id ORDER BY q.question_date DESC
+						 ) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+	
+	<select id="answerCountQuestion" resultType="int">
+		SELECT COUNT(*) FROM questions where question_check = '답변완료'
+	</select>
+	
+	<select id="selectAnswerQuestionList" resultType="questionRequest">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT q.question_id, c.question_category_name, q.question_title, u.user_name, q.question_date, q.question_check
+							FROM users u, questions q, question_categories c
+							where q.question_check = '답변완료' and u.user_id = q.user_id_send and q.question_category_id = c.question_category_id ORDER BY q.question_date DESC
+						 ) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+	
+	
+	<select id="getQuestion" resultType="questionRequest">
+		SELECT q.question_id, c.question_category_name, q.question_title, q.question_content, u.user_name, q.question_date, q.question_category_id, u.user_id, q.question_image
+		FROM users u, questions q, question_categories c
+		where u.user_id = q.user_id_send and q.question_category_id = c.question_category_id and q.question_id = #{question_id}
+	</select>
+	
+	<update id="questionAnswer" parameterType="map">
+		update questions set
+			question_check = '답변완료'
+		where question_id = #{question_id}
+	</update>
+	
+	<insert id="insertQuestion" parameterType="questionRequest">
+		insert into questions values(questions_seq.nextval, #{question_category_id}, 0, #{question_title}, #{question_content}, #{question_image}, '답변완료', sysdate, #{user_id_receive})
+	</insert>
+	
+	<select id="getUser" resultType="userVo">
+		select * from users where user_id=#{id}
+	</select>
+	
+	<select id="getRestaurants" resultType="restaurantRequest">
+		select a.restaurant_id, a.user_id, a.restaurant_name, a.restaurant_tell,
+			   a.restaurant_address, a.restaurant_owner, a.restaurant_businessnumber,
+			   a.restaurant_businessnumber_img, b.category_name, a.restaurant_accept,
+			   a.restaurant_grade, a.restaurant_date, a.latitude, a.longitude
+		from restaurants a, categories b
+		where a.user_id = #{user_id} and a.category_id = b.category_id
+	</select>
+	
+	<!-- 총 user 갯수 출력 -->
+	<select id="countUsers" resultType="int">
+		SELECT COUNT(*) FROM users
+	</select>
+	
+	<select id="countBuisness" resultType="int">
+		SELECT COUNT(*) FROM users where user_level = 1
+	</select>
+
+	<!-- 페이징 처리 후 게시글 조회 -->
+	<select id="selectUserList" resultType="userVo">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM users
+							WHERE user_level = 1 or user_level = 2 ORDER BY user_date DESC 
+						 ) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+	
+	<select id="selectBuisness" resultType="userVo">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM users
+							ORDER BY user_date DESC 
+						 ) A
+					) 
+		WHERE RN BETWEEN #{start} AND #{end} and user_level = 1
+	</select>
+	
+	<update id="updateUser" parameterType="map">
+		update users set
+			user_address = #{user_address},
+			user_tell = #{user_tell},
+			user_nickname = #{user_nickname},
+			user_level = #{user_level},
+			user_point = #{user_point},
+			user_email = #{user_email}
+		where user_id = #{user_id}
+	</update>
+	
+	<update id="businessAcknowledge" parameterType="map">
+		update restaurants set
+			restaurant_accept = 1
+		where user_id = #{user_id}
+	</update>
+
+</mapper>
