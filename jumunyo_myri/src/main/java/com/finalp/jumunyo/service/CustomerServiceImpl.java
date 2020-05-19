@@ -605,7 +605,7 @@ public class CustomerServiceImpl implements CustomerService {
 			
 			my.update("ordering_insert", order1);
 			Date time = seat_order1.getReservation_time();
-			if (time != null && !((List<UserVO>) time).contains("null")) { // date와 time중 하나라도 null이면
+			if (time != null ) { 
 				my.update("seat_order_insert",seat_order1);
 			}
 					

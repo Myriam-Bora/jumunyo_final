@@ -454,8 +454,9 @@
  	
  	
  	<update id="seat_order_insert" parameterType="SeatOrderVO">
+ 	
  		INSERT INTO seat_orders values (
- 			#{seat_order_id}, to_date(#{reservation_time}, 'YY-MM-DD HH24:MI:SS'), 
+ 			seat_orders_seq.nextval, #{reservation_time}, 
  			#{restaurant_id}, #{user_id}, #{room_id}, #{order_id}, #{request}
  		)
  	</update>

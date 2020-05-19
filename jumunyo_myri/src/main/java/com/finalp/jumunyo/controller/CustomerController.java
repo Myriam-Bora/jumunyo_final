@@ -2,6 +2,7 @@ package com.finalp.jumunyo.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -640,7 +641,7 @@ public class CustomerController {
 		}
 		
 		@RequestMapping("payment.do")
-		public String payment(HttpSession session, HttpServletRequest request) {
+		public String payment(HttpSession session, HttpServletRequest request) throws ParseException {
 					
 			OrderVO order1 = new OrderVO();
 			int max_id_num = service.getMaxOrderId();
@@ -682,9 +683,11 @@ public class CustomerController {
 			
 			String booking_date = (String) session.getAttribute("booking_date");
 			String booking_time = (String) session.getAttribute("booking_time");
-			String time = booking_date + " " + booking_time;
-					
-			seat_order1.setReservation_time(time);
+			String time = booking_date + " " + booking_time + ":00";
+			SimpleDateFormat time2 = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+			Date time3 = time2.parse(time);
+			
+			seat_order1.setReservation_time(time3);
 			seat_order1.setRestaurant_id(res1.getRestaurant_id());
 			seat_order1.setUser_id(user1.getUser_id());
 			
