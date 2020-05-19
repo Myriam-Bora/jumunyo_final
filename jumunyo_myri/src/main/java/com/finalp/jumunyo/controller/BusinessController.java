@@ -301,7 +301,7 @@ public class BusinessController {
 		
 		List<SeatOrderVO> svo = service.reservation_list_paging(pagingVO,rvo);
 		for(int i=0;i<svo.size(); i++) {
-			String time = svo.get(i).getReservation_time();
+			Date time = svo.get(i).getReservation_time();
 			int id = svo.get(i).getOrder_id();
 			System.out.println(time);
 			System.out.println(id);

@@ -700,6 +700,7 @@ div.rememberme {
 		<c:otherwise>
 		<div class="welcome">
 			<a href="mypageMenuPage.do" style="text-decoration: none;"><b>${userSession.user_name }님 환영합니다.</b></a>
+			<b>${userSession.user_point}P 보유</b>
 			<a href="logOut.do" style="text-decoration: none;"><b>로그아웃</b></a>
 			</div>
 		</c:otherwise>

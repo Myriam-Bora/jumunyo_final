@@ -604,8 +604,8 @@ public class CustomerServiceImpl implements CustomerService {
 		public void payment(HttpSession session, OrderVO order1, SeatOrderVO seat_order1) {
 			
 			my.update("ordering_insert", order1);
-			String time = seat_order1.getReservation_time();
-			if (time != null && !time.contains("null")) { // date와 time중 하나라도 null이면
+			Date time = seat_order1.getReservation_time();
+			if (time != null && !((List<UserVO>) time).contains("null")) { // date와 time중 하나라도 null이면
 				my.update("seat_order_insert",seat_order1);
 			}
 					

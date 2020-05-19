@@ -45,7 +45,7 @@
 	
 	
 	<select id="getQuestion" resultType="questionRequest">
-		SELECT q.question_id, c.question_category_name, q.question_title, q.question_content, u.user_name, q.question_date, q.question_category_id, u.user_id, q.question_image
+		SELECT q.question_id, c.question_category_name, q.question_title, q.question_content, u.user_name, q.question_date, q.question_check, q.question_category_id, u.user_id, q.question_image
 		FROM users u, questions q, question_categories c
 		where u.user_id = q.user_id_send and q.question_category_id = c.question_category_id and q.question_id = #{question_id}
 	</select>
