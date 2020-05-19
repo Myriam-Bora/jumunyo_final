@@ -1,10 +1,7 @@
 package com.finalp.jumunyo.service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import javax.servlet.http.HttpSession;
 
 import com.finalp.jumunyo.util.PagingVO;
 import com.finalp.jumunyo.vo.CategoryVO;
@@ -12,9 +9,7 @@ import com.finalp.jumunyo.vo.MenuVO;
 import com.finalp.jumunyo.vo.OrderVO;
 import com.finalp.jumunyo.vo.QuestionCategoryVO;
 import com.finalp.jumunyo.vo.QuestionVO;
-import com.finalp.jumunyo.vo.ReplyVO;
 import com.finalp.jumunyo.vo.RestaurantVO;
-import com.finalp.jumunyo.vo.ReviewVO;
 import com.finalp.jumunyo.vo.RoomVO;
 import com.finalp.jumunyo.vo.SeatOrderVO;
 import com.finalp.jumunyo.vo.UserVO;
@@ -53,7 +48,8 @@ public interface BusinessService {
 		
 	 	
 	 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 권세현 start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-	 	
+	public RestaurantVO restaurant_session(UserVO uvo);
+	
 	public List<CategoryVO> goentrance();
 	
 	public void entrance_request(RestaurantVO rvo);
@@ -107,6 +103,7 @@ public interface BusinessService {
 	
 	
 	public List<UserVO> user_list();
+
 
 	 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 권세현 end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 

@@ -10,11 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Properties;
-import java.util.Random;
 import java.util.Set;
-
-import javax.servlet.http.HttpSession;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,7 +64,13 @@ public class BusinessServiceImpl implements BusinessService {
 			
 		 	
 		 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 권세현 start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		 	
+		
+		@Override
+		public RestaurantVO restaurant_session(UserVO uvo) {
+			return my.selectOne("Business.restaurant_session",uvo);
+		}
+		
+	
 		@Override
 		public List<CategoryVO> goentrance() {
 			// db에서 카테고리 목록 대리고 입점신청 페이지로 이동
@@ -226,9 +228,6 @@ public class BusinessServiceImpl implements BusinessService {
 			imsi.put("start", pgvo.getStart());
 			imsi.put("end", pgvo.getEnd());
 			imsi.put("restaurant_id", rvo.getRestaurant_id());
-			
-			List<SeatOrderVO> slist = my.selectList("Business.reservation_list_paging",imsi);
-			List<String> tlist = my.selectList("Business.reservation_time_string",imsi);
 
 			return my.selectList("Business.reservation_list_paging",imsi);
 		}
@@ -643,5 +642,6 @@ public class BusinessServiceImpl implements BusinessService {
 			return my.selectList("Business.user_list");
 		}
 		 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 권세현 end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 
 }

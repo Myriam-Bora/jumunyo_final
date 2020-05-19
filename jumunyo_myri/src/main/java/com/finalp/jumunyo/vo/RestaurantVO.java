@@ -16,8 +16,8 @@ public class RestaurantVO {
 	private int restaurant_accept;
 	private double restaurant_grade;
 	private Date restaurant_date;
-	private int latitude;
-	private int longitude;
+	private double latitude;
+	private double longitude;
 	
 	public int getRestaurant_id() {
 		return restaurant_id;
@@ -91,16 +91,16 @@ public class RestaurantVO {
 	public void setRestaurant_date(Date restaurant_date) {
 		this.restaurant_date = restaurant_date;
 	}
-	public int getLatitude() {
+	public double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(int latitude) {
+	public void setLatitude(double latitude) {
 		this.latitude = latitude;
 	}
-	public int getLongitude() {
+	public double getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(int longitude) {
+	public void setLongitude(double longitude) {
 		this.longitude = longitude;
 	}
 	

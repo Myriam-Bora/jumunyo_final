@@ -524,14 +524,19 @@
 		<!-- 지도 aip -->
 		<!-- 사업자 등록시 입력했던 주소값을 기초로 api에 담아야한다 -->
 		<%-- <input type="text" name="restaurant_address" class="addressinput" value=${ restaurant_address} /> --%>
+		<input type="hidden" id="aa1" value="${res11.latitude }" />
+		<input type="hidden" id="bb1" value="${res11.longitude }" />
 		<input type="hidden" id="find1" class="addressfindbtn" onmouseover="changecolor('find1');" onmouseout="changeback('find1');"
 			onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
 		<div id="map" style="width:500px;height:400px;"></div>
 			<script>
+			
+				var latitude1 = document.getElementById("aa1").value;
+				var longitude1 = document.getElementById("bb1").value;
 				/* 도로명 주소 api */
 				var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 				mapOption = {
-					center : new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
+					center : new daum.maps.LatLng(latitude1, longitude1), // 지도의 중심좌표
 					level : 5
 				// 지도의 확대 레벨
 				};
@@ -542,7 +547,7 @@
 				var geocoder = new daum.maps.services.Geocoder();
 				//마커를 미리 생성
 				var marker = new daum.maps.Marker({
-					position : new daum.maps.LatLng(37.537187, 127.005476),
+					position : new daum.maps.LatLng(latitude1, longitude1),
 					map : map
 				});
 

@@ -567,20 +567,20 @@ public class CustomerController {
 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 이종명 start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
  	
 		@RequestMapping("restaurant_detail.do")
-		public String restaurantDetail(HttpSession session,RestaurantVO rvo) {
+		public String restaurantDetail(HttpSession session,RestaurantVO rvo, Model model) {
 					
-		System.out.println(rvo.getRestaurant_id());
-		
 			RestaurantVO res1 = (RestaurantVO)service.getOneStore(rvo.getRestaurant_id());
 			ArrayList<MenuVO> menu_list1 = service.getStoreMenu(res1.getRestaurant_id());
 			ArrayList<ReviewVO> review_list1 = service.getStoreReview(res1.getRestaurant_id());
 			HashMap<String, ReplyVO> reply_list1 = service.getReviewReply(review_list1);
-			System.out.println(reply_list1.get("1"));
 			session.setAttribute("getOneStore", res1);
 			session.setAttribute("getStoreMenu", menu_list1);
 			session.setAttribute("getStoreReview", review_list1);
 			session.setAttribute("getReviewReply", reply_list1);
 			session.setAttribute("storeSession", res1);
+			
+			model.addAttribute("res11", res1);
+			System.out.println("latitude : " + res1.getLatitude());
 			
 			return "customer/restaurantDetail";
 		}

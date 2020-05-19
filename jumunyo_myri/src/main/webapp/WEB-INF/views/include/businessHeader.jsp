@@ -1,11 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style>
+body {
+	margin: 0;
+	padding: 0;
+}
 .header {
 	width: 100%;
 	height: 50px;
@@ -77,7 +82,7 @@
 <body>
 	<div class="header">
 			<div id="logo" onmouseover="logo1();" onmouseout="logo2();">
-				<a href="../index.jsp" style="text-decoration: none;"> 
+				<a href="start.jsp" style="text-decoration: none;"> 
 					<b id="a1">주</b> 
 					<b id="a2">문</b> 
 					<b id="a3">이</b> 
@@ -91,11 +96,11 @@
 		<div class="operator">
 			<b>운영자</b>
 			<a>(</a>			
-			<a href="" style="text-decoration: none; color: red; font-size: 15px;">홍길동</a>
+			<a href="mypageMenuPage.do" style="text-decoration: none; color: red; font-size: 15px;">${userSession.user_name }</a>
 			<a>)</a>
 		</div>
 		<div class="logout">
-			<a href="" style="text-decoration: none; font-size: 20px;"><b>로그아웃</b></a>
+			<a href="logOut.do" style="text-decoration: none; font-size: 20px;"><b>로그아웃</b></a>
 		</div>
 	</div>
 
