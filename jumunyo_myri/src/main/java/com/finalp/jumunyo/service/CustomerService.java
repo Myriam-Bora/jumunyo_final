@@ -151,6 +151,8 @@ public interface CustomerService {
 	public List<SeatOrderVO> getSeatOrders(int restaurant_id);
 
 	public void roomReserve(int room_id);
+
+	public void DateSessionUpdate();
 	
 	
 	

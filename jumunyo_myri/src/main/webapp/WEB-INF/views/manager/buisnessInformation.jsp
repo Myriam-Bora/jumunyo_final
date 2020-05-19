@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-	<form action="/search/businessAcknowledge/${restaurants.user_id}" method="post">
+	<form action="/jumunyo/businessAcknowledge/${restaurants.user_id}" method="post">
 		회원 번호 : <input type="text" value="${restaurants.user_id}"/> <br>
 		매장 번호 : <input type="text" value="${restaurants.restaurant_id}"/> <br>
 		매장 이름 : <input type="text" value="${restaurants.restaurant_name}"/> <br>

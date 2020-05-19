@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -219,7 +220,7 @@
 				<a>${menuNameList2[status.index]}</a> <!-- 여기는 주문메뉴와 갯수를 출력하는곳 -->
 				</div>
 				<div class="pay-date">
-				<a>${orderList2.order_date }</a> <!-- 여기는 결제시간 출력하는곳 -->
+				<a><fmt:formatDate value="${orderList2.order_date}" pattern="yyyy년 MM월 dd일 HH:mm"/></a>
 				</div>
 				<div class="price">
 				<a>${orderList2.order_price}</a> <!-- 여기는 금액 출력하는곳 -->

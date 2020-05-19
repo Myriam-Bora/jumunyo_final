@@ -97,6 +97,7 @@ public class ManagerServiceImpl implements ManagerService {
 
 	@Override
 	public void businessAcknowledge(int user_id) throws Exception {
+		my.update("Manager.businessLevel", user_id);
 		my.update("Manager.businessAcknowledge", user_id);
 	}
 

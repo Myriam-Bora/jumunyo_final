@@ -278,7 +278,7 @@ body {
 								관리자
 							</c:if>
 							<c:if test="${qlist.user_id_send != 0}">
-								${uvo.user_name } 님
+								${userSession.user_name } 님
 							</c:if>
 						</div>
 						<div class="created">
@@ -313,15 +313,15 @@ body {
 						
 						<div style="margin: 0 60px;"><b>작성자</b></div>
 						<div class="textarea">
-								이종명
-							</div>
-							<div class="dateTitle">
 								<c:if test="${qlist.user_id_send == 0}">
-								관리자
+									관리자
 								</c:if>
 								<c:if test="${qlist.user_id_send != 0}">
-									${uvo.user_name } 님
+									${userSession.user_name } 님
 								</c:if>
+							</div>
+							<div class="dateTitle">
+								날짜
 							</div>
 						<div class="date">
 							<fmt:formatDate value="${qlist.question_date }" pattern="yyyy년 MM월 dd일 HH:mm"/>

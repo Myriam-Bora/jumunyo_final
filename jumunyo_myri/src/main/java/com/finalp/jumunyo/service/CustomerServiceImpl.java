@@ -1,4 +1,4 @@
-package com.finalp.jumunyo.service;
+ package com.finalp.jumunyo.service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -650,6 +650,12 @@ public class CustomerServiceImpl implements CustomerService {
 		@Override
 		public void roomReserve(int room_id) {
 			my.update("roomReserve", room_id);
+		}
+
+		@Override
+		public void DateSessionUpdate() {
+			
+			my.update("DateSessionUpdate");
 		} 	
 		
 		

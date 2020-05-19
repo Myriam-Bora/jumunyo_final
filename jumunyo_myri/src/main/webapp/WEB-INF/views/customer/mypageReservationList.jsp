@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -205,11 +206,13 @@
 								<!-- 여기는 주문메뉴와 갯수를 출력하는곳 -->
 							</div>
 							<div class="pay-date">
-								<a>${orderList.order_date }</a>
+							<a><fmt:formatDate value="${orderList.order_date}" pattern="yyyy년 MM월 dd일 HH:mm"/></a>
+								
 								<!-- 여기는 결제시간 출력하는곳 -->
 							</div>
 							<div class="price">
-								<a>${seatOrderList[status.index].reservation_time}</a>
+								<fmt:formatDate value="${seatOrderList[status.index].reservation_time}" pattern="yyyy년 MM월 dd일 HH:mm"/>
+								
 								<!-- 여기는 예약시간 출력하는곳 -->
 							</div>
 							<div class="review">

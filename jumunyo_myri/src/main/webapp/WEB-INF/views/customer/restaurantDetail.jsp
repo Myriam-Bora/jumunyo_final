@@ -1,8 +1,10 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
 <%@page import="com.finalp.jumunyo.vo.ReplyVO"%>
 <%@page import="com.finalp.jumunyo.vo.ReviewVO"%>
 <%@page import="com.finalp.jumunyo.vo.MenuVO"%>
 <%@page import="java.util.ArrayList"%>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@page import="com.finalp.jumunyo.vo.RestaurantVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -384,7 +386,9 @@
 		<%= review_list1.get(i).getUser_id() %>
 		</div>
 		<div class="review-date">
-		<%= review_list1.get(i).getReview_date() %>
+		
+		<fmt:formatDate value="<%= review_list1.get(i).getReview_date() %>" 
+			pattern="yyyy년 MM월 dd일 HH:mm:ss"/>
 		</div>
 		<div class="user-star">
 		<% double userStarPoint = review_list1.get(i).getReview_grade(); %>
@@ -458,7 +462,8 @@
 		사장님
 		</div>
 		<div class="review-date">
-		<%= reply1.getReply_date() %>
+		<fmt:formatDate value="<%= reply1.getReply_date() %>" 
+			pattern="yyyy년 MM월 dd일 HH:mm:ss"/>
 		</div>
 		<div class="review-text">
 		<p><%= reply1.getReply_content() %></p>

@@ -125,5 +125,11 @@
 			restaurant_accept = 1
 		where user_id = #{user_id}
 	</update>
+	
+	<update id="businessLevel" parameterType="map">
+		update users set
+			user_level = 1
+		where user_id = #{user_id}
+	</update>
 
 </mapper>

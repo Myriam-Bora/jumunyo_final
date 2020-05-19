@@ -18,6 +18,7 @@
 			<td>등급</td>
 		</tr>
 		<c:forEach var="buisness" items="${businessList}">
+		<c:if test="${buisness.user_level == 2}">
 		<tr>
 			<td>${buisness.user_id}</td>
 			<td>${buisness.user_account}</td>
@@ -26,6 +27,7 @@
 			<td>${buisness.user_date}</td>
 			<td>${buisness.user_level}</td>
 		</tr>
+		</c:if>
 		</c:forEach>
 	</table>
 	

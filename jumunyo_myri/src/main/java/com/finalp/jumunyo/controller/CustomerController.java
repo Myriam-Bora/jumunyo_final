@@ -63,6 +63,11 @@ public class CustomerController {
 	//start 메인페이지
 	@RequestMapping("Index.do")
 	public String loginPage(HttpServletRequest request,UserVO vo,HttpSession session) {
+		
+		
+		service.DateSessionUpdate();
+		
+		
 		Cookie[] cookies = request.getCookies();
 		System.out.println(cookies);
 		if(cookies != null) {
@@ -685,9 +690,14 @@ public class CustomerController {
 			String booking_time = (String) session.getAttribute("booking_time");
 			String time = booking_date + " " + booking_time + ":00";
 			SimpleDateFormat time2 = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
-			Date time3 = time2.parse(time);
 			
-			seat_order1.setReservation_time(time3);
+			if (booking_date != null && booking_time != null) {
+				Date time3 = time2.parse(time);
+				seat_order1.setReservation_time(time3);				
+			} else {
+				System.out.println("시간과 날짜 중 최소 하나가 null");
+			}
+			
 			seat_order1.setRestaurant_id(res1.getRestaurant_id());
 			seat_order1.setUser_id(user1.getUser_id());
 			

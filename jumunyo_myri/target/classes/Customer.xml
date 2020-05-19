@@ -473,6 +473,9 @@
  		UPDATE rooms SET room_check=1 WHERE room_id = #{room_id}
  	</update>
  	
+ 	<update id="DateSessionUpdate">
+ 		alter session set nls_date_format = 'YY/MM/DD HH24:MI:SS'
+ 	</update>
  	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 이종명 end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
  	
  	
