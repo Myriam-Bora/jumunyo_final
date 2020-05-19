@@ -351,7 +351,7 @@
 			&nbsp;&nbsp;
 			<input type="text" id="user_address" name="user_address" class="addressinput" value="${sessionScope.userSession.user_address }" /> &nbsp;&nbsp;
 			<input type="hidden" name="user_id" value="${sessionScope.userSession.user_id }" />
-			<input type="button" id="find1" class="addressfindbtn" onmouseover="changecolor('find1');" onmouseout="changeback('find1');"
+		<!-- 	<input type="button" id="find1" class="addressfindbtn" onmouseover="changecolor('find1');" onmouseout="changeback('find1');"
 			onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
 				<div id="map" style="width:500px;height:400px;"></div>
 			<script> /* 도로명 주소 api */
@@ -399,7 +399,7 @@
 		            }
 		        }).open();
 		    }
-		</script>
+		</script> -->
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
 			<input type="submit" class="addressbtn" id="add1" value="주소 수정" onmouseover="changecolor('add1');" onmouseout="changeback('add1');" />

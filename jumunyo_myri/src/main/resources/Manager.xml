@@ -106,7 +106,7 @@
 							ORDER BY user_date DESC 
 						 ) A
 					) 
-		WHERE RN BETWEEN #{start} AND #{end} and user_level = 1
+		WHERE RN BETWEEN #{start} AND #{end} and user_level = 1 or user_level = 2
 	</select>
 	
 	<update id="updateUser" parameterType="map">

@@ -7,19 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-5월15 커밋
+
+<%response.sendRedirect("Index.do");%>
 
 <!-- 테스트용 -->
-<form action="selectAll.do">
+<!-- <form action="selectAll.do">
 	<input type="submit" value="테스트">
 </form>
 
-<!--메인 Index -->
+메인 Index
 <form action="Index.do">
 	<input type="submit" value="메인페이지" />
 </form>
 
-<!-- 세현임시 -->
+세현임시
 <hr>
 
 <form action="ready">
@@ -59,12 +60,12 @@
 </form>
 
 <hr />
-	<!-- 매니저 임시 -->
+	매니저 임시
 	<a href="login">로그인</a> <br />
 	<a href="userList">회원 목록</a> <br />
 	<a href="businessList">입점 승인</a> <br />
 	<a href="answerQuestionList">1 대 1 문의 보기</a> <br />
-	<a href="questionList">1 대 1 문의 작성</a> <br />
+	<a href="questionList">1 대 1 문의 작성</a> <br /> -->
 
 </body>
 </html>
