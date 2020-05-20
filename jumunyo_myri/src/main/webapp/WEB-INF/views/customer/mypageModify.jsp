@@ -114,6 +114,12 @@
 .addressfindbtn {
 	width: 140px; height: 30px; font-size: 20px; background: red; border: none; border-radius: 20px;
 }
+#nicknameChk {
+	font-size: 15px;
+}
+#emailChk {
+	font-size: 15px;
+}
 </style>
 <script> 	/* 닉네임 확인 */
 	$(function() {
@@ -129,7 +135,7 @@
 								user_nickname.css("background", "pink");
 								$("#nicknameChk")
 										.html(
-												"<b style='color:red;'>[닉네임을 입력해주세요]</b>");
+												"<b style='color:red; '>[닉네임을 입력해주세요]</b>");
 							} else if (user_nickname.val() !== "") {
 								/*
 									# AJAX 비동기 통신
@@ -183,7 +189,7 @@
 								user_email.css("background", "pink");
 								$("#emailChk")
 										.html(
-												"<b style='color:red;'>[이메일을 입력해주세요]</b>");
+												"<b style='color:red; '>[이메일을 입력해주세요]</b>");
 							} else if (user_email.val() !== "") {
 								/*
 									# AJAX 비동기 통신
@@ -206,13 +212,13 @@
 															"pink");
 													$("#emailChk")
 															.html(
-																	"<b style='color:red;'>[사용 불가능한 이메일입니다.]</b>");
+																	"<b style='color:red; '>[사용 불가능한 이메일입니다]</b>");
 												} else if (result === "YES") {//mypageCheck.do 컨트롤러 에서 넘어온 결과
 													user_email.css("background",
 															"white");
 													$("#emailChk")
 															.html(
-																	"<b style='color:green;'>[사용 가능한 이메일입니다.]</b>");
+																	"<b style='color:green; '>[사용 가능한 이메일입니다]</b>");
 												}
 											}, //통신 성공시 클라이언트에서 해야할 일들을 함수로 기술한다.
 											error : function() {
@@ -405,10 +411,10 @@
 			<input type="submit" class="addressbtn" id="add1" value="주소 수정" onmouseover="changecolor('add1');" onmouseout="changeback('add1');" />
 		</div>
 		</form>
-		<form action="deleteUser.do">
+		<form action="deleteUser.do" name="removefrm">
 		<div class="userdelete">
 			<input type="hidden" name="user_id" value="${sessionScope.userSession.user_id }"/>			
-			<input type="submit" value="회원탈퇴" />
+			<input type="button" value="회원탈퇴" onclick="removeCheck()"/>
 		</div>
 		</form>
 	</div>
@@ -424,6 +430,15 @@
 
 </body>
 <script>
+
+		function removeCheck() {
+	 		if (confirm("탈퇴하시겠습니까??") == true){    //확인
+     		document.removefrm.submit();
+ 			}else{   //취소
+    		 return false;
+ 			}
+		}
+	
 	function changecolor(id) {
 		document.getElementById(id).style.background ="blue";
 		document.getElementById(id).style.color="red";

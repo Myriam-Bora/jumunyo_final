@@ -140,7 +140,7 @@ public class CustomerController {
 	public String join(UserVO vo) {
 		boolean result = service.join(vo); //회원가입 입력 결과를 담는다
 		if(result) { //true이면
-			return "include/result";
+			return "customer/customerIndex";
 		} else {
 		return "customer/joinfail";   //회원가입 실패시 모달 처리를 어떻게 해야할 지 질문 할것
 		}

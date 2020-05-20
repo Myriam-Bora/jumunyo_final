@@ -227,8 +227,8 @@
 		</div>
 		
 <!--카카오페이 api  -->		
-<form action="kakaopay.do" method="post"></form>
-	<input type="button" value="카카오페이 결제하기" />		
+<!-- <form action="kakaopay.do" method="post"></form>
+	<input type="button" value="카카오페이 결제하기" />		 -->
 <script>
 
 function removeCheck() {

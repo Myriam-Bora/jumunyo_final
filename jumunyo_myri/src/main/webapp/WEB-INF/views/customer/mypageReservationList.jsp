@@ -46,7 +46,7 @@
 	line-height:50px;
 }
 .orderId > a {
-	line-height:50px;
+	line-height:70px;
 }
 .res-name {
 	float:left;
@@ -62,7 +62,7 @@
 	line-height:50px;
 }
 .res-name > a {
-	line-height:50px;
+	line-height:70px;
 }
 .trans-kinds {
 	float:left;
@@ -78,7 +78,7 @@
 	line-height:50px;
 }
 .trans-kinds > a {
-	line-height:50px;
+	line-height:70px;
 }
 .ordermenu {
 	float:left;
@@ -92,6 +92,9 @@
 }
 .ordermenu > b {
 	line-height:50px;
+}
+.ordermenu > a {
+	
 }
 .pay-date {
 	float:left;
@@ -107,7 +110,7 @@
 	line-height:50px;
 }
 .pay-date > a {
-	line-height:50px;
+	line-height:70px;
 }
 .price {
 	float:left;
@@ -123,7 +126,7 @@
 	line-height:50px;
 }
 .price > a {
-	line-height:50px;
+	line-height:70px;
 }
 .review {
 	float:left;
@@ -138,12 +141,12 @@
 	line-height:50px;
 }
 .review > a {
-	line-height:50px;
+	line-height:70px;
 }
 .tabletd {
 	margin: 0;
 	width: 920px;
-	height: 50px;
+	height: 70px;
 	border-bottom: 1px dashed #878787;
 	border-left: 2px solid #878787;
 	border-right: 2px solid #878787;
@@ -211,9 +214,7 @@
 								<!-- 여기는 결제시간 출력하는곳 -->
 							</div>
 							<div class="price">
-								<fmt:formatDate value="${seatOrderList[status.index].reservation_time}" pattern="yyyy년 MM월 dd일 HH:mm"/>
-								
-								<!-- 여기는 예약시간 출력하는곳 -->
+								<a><fmt:formatDate value="${seatOrderList[status.index].reservation_time}" pattern="yyyy년 MM월 dd일 HH:mm"/></a>				<!-- 여기는 예약시간 출력하는곳 -->
 							</div>
 							<div class="review">
 								<a>${orderList.order_price}</a>

@@ -17,7 +17,8 @@ body {
 .header { 
 	width: 100%;
 	height: 50px;
-	background: linear-gradient(to bottom, #FFA7A7, #B7F0B1, #f69d3c);
+	/* background: linear-gradient(to bottom, #FFA7A7, #B7F0B1, #f69d3c); */
+	background: #FF3636;
 }
 
 #logo {
@@ -86,7 +87,7 @@ body {
 .welcome {
 	float: left;
 	margin: 0 0 0 5%;
-	width: 300px;
+	width: 370px;
 	line-height: 50px;
 }
 .welcome > a {

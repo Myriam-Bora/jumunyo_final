@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+body {
+	margin: 0;
+	padding: 0;
+	background: #EAEAEA;
+}
 .category1 {
 	margin: 50px 300px;
 	padding: 0;
@@ -16,6 +21,7 @@
 	width: 200px;
 	height: 200px; 
 	border: black solid 1px;
+	border-radius: 100px;
 }
 .category2 {
 	margin: 0 300px;
@@ -28,6 +34,7 @@
 	width: 200px;
 	height: 200px; 
 	border: black solid 1px;
+	border-radius: 100px;
 }
 .category3 {
 	margin: 0 300px;
@@ -40,6 +47,7 @@
 	width: 200px;
 	height: 200px; 
 	border: black solid 1px;
+	border-radius: 100px;
 }
 .footer {
 	width: 100%;
@@ -55,7 +63,8 @@
 	
 	<div class="allCategory">	
 	<a href="categorySearch.do" style="text-decoration:none;">
-		<img src="resources/image/allCategory.png" alt="allCategory" width="200px" height="200px" />
+		<img src="resources/image/allCategory.png" alt="allCategory" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전체 보기</b>
@@ -65,7 +74,8 @@
 	
 	<div class="franchise">
 	<a href="categorySearch.do?category_id=1" style="text-decoration:none;">
-		<img src="resources/image/Franchise.png" alt="Franchise" width="200px" height="200px" />
+		<img src="resources/image/Franchise.png" alt="Franchise" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;프렌차이즈</b>
@@ -75,7 +85,8 @@
 	
 	<div class="chicken">
 	<a href="categorySearch.do?category_id=2" style="text-decoration:none;">
-		<img src="resources/image/Chicken.png" alt="Chicken" width="200px" height="200px" />
+		<img src="resources/image/Chicken.png" alt="Chicken" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치킨</b>
@@ -85,7 +96,8 @@
 	
 	<div class="pizza">
 	<a href="categorySearch.do?category_id=3" style="text-decoration:none;">
-		<img src="resources/image/Pizza.png" alt="Pizza" width="200px" height="200px" />
+		<img src="resources/image/Pizza.png" alt="Pizza" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;피자/양식</b>
@@ -97,7 +109,8 @@
 	
 	<div class="china">
 	<a href="categorySearch.do?category_id=4" style="text-decoration:none;">
-		<img src="resources/image/China.png" alt="China" width="200px" height="200px" />		
+		<img src="resources/image/China.png" alt="China" width="100%" height="100%" 
+		style="border-radius: 100px;"/>		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;중국집</b>
 	</a>
@@ -106,7 +119,8 @@
 	
 	<div class="korea">
 	<a href="categorySearch.do?category_id=5" style="text-decoration:none;">
-		<img src="resources/image/Korea.png" alt="Korea" width="200px" height="200px" />		
+		<img src="resources/image/Korea.png" alt="Korea" width="100%" height="100%" 
+		style="border-radius: 100px;"/>		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한식</b>
 	</a>
@@ -115,7 +129,8 @@
 	
 	<div class="japan">
 	<a href="categorySearch.do?category_id=6" style="text-decoration:none;">
-		<img src="resources/image/Japan.png" alt="Japan" width="200px" height="200px" />
+		<img src="resources/image/Japan.png" alt="Japan" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일식/돈까스</b>
@@ -125,7 +140,8 @@
 	
 	<div class="porkfeet">
 	<a href="categorySearch.do?category_id=7" style="text-decoration:none;">
-		<img src="resources/image/Porkfeet.png" alt="Porkfeet" width="200px" height="200px" />
+		<img src="resources/image/Porkfeet.png" alt="Porkfeet" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;족발</b>
@@ -137,7 +153,8 @@
 	
 	<div class="yasik">
 	<a href="categorySearch.do?category_id=8" style="text-decoration:none;">
-		<img src="resources/image/Yasik.png" alt="Yasik" width="200px" height="200px" />
+		<img src="resources/image/Yasik.png" alt="Yasik" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;야식</b>
@@ -147,7 +164,8 @@
 	
 	<div class="boonsik">
 	<a href="categorySearch.do?category_id=9" style="text-decoration:none;">
-		<img src="resources/image/Boonsik.png" alt="Boonsik" width="200px" height="200px" />
+		<img src="resources/image/Boonsik.png" alt="Boonsik" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분식</b>
@@ -157,7 +175,8 @@
 	
 	<div class="caffe">
 	<a href="categorySearch.do?category_id=10" style="text-decoration:none;">
-		<img src="resources/image/Caffe.png" alt="Caffe" width="200px" height="200px" />
+		<img src="resources/image/Caffe.png" alt="Caffe" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;카페/디저트</b>
@@ -167,7 +186,8 @@
 	
 	<div class="other">
 	<a href="categorySearch.do?category_id=11" style="text-decoration:none;">
-		<img src="resources/image/Other.png" alt="Other" width="200px" height="200px" />
+		<img src="resources/image/Other.png" alt="Other" width="100%" height="100%" 
+		style="border-radius: 100px;"/>
 		
 		<br />
 		<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기타</b>

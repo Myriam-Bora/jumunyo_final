@@ -46,7 +46,7 @@
 	line-height:50px;
 }
 .orderId > a {
-	line-height:50px;
+	line-height:70px;
 }
 .res-name {
 	float:left;
@@ -62,7 +62,7 @@
 	line-height:50px;
 }
 .res-name > a {
-	line-height:50px;
+	line-height:70px;
 }
 .trans-kinds {
 	float:left;
@@ -78,7 +78,7 @@
 	line-height:50px;
 }
 .trans-kinds > a {
-	line-height:50px;
+	line-height:70px;
 }
 .ordermenu {
 	float:left;
@@ -107,7 +107,7 @@
 	line-height:50px;
 }
 .pay-date > a {
-	line-height:50px;
+	line-height:70px;
 }
 .price {
 	float:left;
@@ -123,7 +123,7 @@
 	line-height:50px;
 }
 .price > a {
-	line-height:50px;
+	line-height:70px;
 }
 .review {
 	float:left;
@@ -143,10 +143,13 @@
 .review > b {
 	line-height:50px;
 }
+.review > a {
+	line-height:70px;
+}
 .tabletd {
 	margin: 0;
 	width: 920px;
-	height: 50px;
+	height: 70px;
 	border-bottom: 1px dashed #878787;
 	border-left: 2px solid #878787;
 	border-right: 2px solid #878787;
@@ -228,7 +231,7 @@
 				<div class="review">
 					<c:choose>
 						<c:when test="${reviewList2[status.index].review_check == 1}">
-					<b style="line-height:50px; font-size: 15px; color: red;">작성완료</b>
+					<a style="line-height:50px; font-size: 15px; color: red;">작성완료</a>
 					</c:when>						
 						<c:otherwise>				
 					<input type="submit" value="리뷰작성" />
