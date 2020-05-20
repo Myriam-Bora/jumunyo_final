@@ -62,6 +62,10 @@ a {
 b {
 	font-size: 15px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/reviewList.css">
 </head>
@@ -375,6 +379,8 @@ function reply_cancel(id){
 }
 
 </script>
-
+<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

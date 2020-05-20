@@ -45,10 +45,8 @@ body {
 	line-height:300px;
 }
 .footer {
-	width: 100%;
-	position: absolute;
-	top: 940px;
 	border-top: 2px solid black;
+	margin: 20px 0;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="/resources/CSS/businessIndex.css">

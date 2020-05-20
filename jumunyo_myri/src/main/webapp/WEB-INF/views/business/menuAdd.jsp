@@ -58,6 +58,10 @@ body {
 .filebox {
 	margin: 0 250px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -131,6 +135,8 @@ body {
 				</div>
 			</div>
 			</div>
-
+		<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

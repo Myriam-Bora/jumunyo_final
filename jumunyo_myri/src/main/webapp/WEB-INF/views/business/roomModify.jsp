@@ -215,6 +215,10 @@ body {
 	margin: 0 90%;
 	font-size: 20px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/roomModify.css">
 <script
@@ -397,7 +401,9 @@ body {
 		<div class="paging"> <!-- 페이징 위치 -->
 		</div>
 	</div>
-
+<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 
 
 </body>

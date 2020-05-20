@@ -211,6 +211,10 @@ body {
 	margin: 0 90%;
 	font-size: 20px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/questionList.css">
 <script
@@ -278,7 +282,7 @@ body {
 								관리자
 							</c:if>
 							<c:if test="${qlist.user_id_send != 0}">
-								${uvo.user_name } 님
+								${userSession.user_name } 님
 							</c:if>
 						</div>
 						<div class="created">
@@ -320,7 +324,7 @@ body {
 								관리자
 								</c:if>
 								<c:if test="${qlist.user_id_send != 0}">
-									${uvo.user_name } 님
+									${userSession.user_name } 님
 								</c:if>
 							</div>
 						<div class="date">
@@ -360,7 +364,9 @@ body {
 				</div>
 			</div>
 		</div>
-	
+	<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 					
 </html>

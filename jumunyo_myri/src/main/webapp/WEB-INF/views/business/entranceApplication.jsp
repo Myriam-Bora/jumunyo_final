@@ -92,6 +92,10 @@ body {
 	margin: 30px 25%;
 	height: auto;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/entranceApplication.css">
 </head>
@@ -244,6 +248,10 @@ body {
 		<input type="hidden" name="latitude" value="" id="latitude" />
 		<input type="hidden" name="longitude" value="" id="longitude"/>
 	</div>
+	
 </form>
+<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

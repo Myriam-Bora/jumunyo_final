@@ -16,7 +16,7 @@ body {
 .window_div {
 	width: 50%;
 	margin: 30px 25%;
-	height: auto;
+	height: 320px;
 }
 .menuBar {
 	position: fixed;
@@ -96,6 +96,10 @@ body {
 .grafButton:active {
 	position:relative;
 	top:1px;
+}
+.footer {
+	border-top: 2px solid black;
+	margin: 900px 0 0 0;
 }
 </style>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -321,6 +325,8 @@ function graph() {
 		document.getElementById("date_term_form").submit();
 	}
 </script>
-
+<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

@@ -53,10 +53,7 @@ input {
 	font-size: 19px;
 	font-family: sans-serif;
 }
-.footer {
-	border-top: 2px solid black;
-	margin: 20px;
-}
+
 </style>
 <script>
 	function changecolor(id) {

@@ -411,7 +411,7 @@
 			<input type="submit" class="addressbtn" id="add1" value="주소 수정" onmouseover="changecolor('add1');" onmouseout="changeback('add1');" />
 		</div>
 		</form>
-		<form action="deleteUser.do" name="removefrm">
+		<form action="deleteUser.do" name="removefrm" id="removefrm">
 		<div class="userdelete">
 			<input type="hidden" name="user_id" value="${sessionScope.userSession.user_id }"/>			
 			<input type="button" value="회원탈퇴" onclick="removeCheck()"/>
@@ -420,7 +420,7 @@
 	</div>
 
 	<div class="footer">
-		<jsp:include page="../include/footer.jsp"/>
+		<jsp:include page="../include/businessFooter.jsp"/>
 		</div>
 
 
@@ -433,7 +433,7 @@
 
 		function removeCheck() {
 	 		if (confirm("탈퇴하시겠습니까??") == true){    //확인
-     		document.removefrm.submit();
+     		document.getElementById("removefrm").submit();
  			}else{   //취소
     		 return false;
  			}

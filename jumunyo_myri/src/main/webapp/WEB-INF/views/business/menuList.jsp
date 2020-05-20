@@ -208,6 +208,10 @@ body {
 	margin: 0 90%;
 	font-size: 20px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/menuList.css">
 <script
@@ -266,8 +270,8 @@ body {
 						<div class="created">
 							<form action="go_menu_modify?menu_id=${mlist.menu_id }" method="post"><input type="submit" value="수정" id="m_modify${loop.count}"
 							style="float: left; width: 45%; height: 42px; margin: 4px; background: #00D8FF; border-radius: 5px;"></form>
-							<form action="menu_delete?menu_id=${mlist.menu_id }" name="removefrm" method="post"><input type="button" value="삭제" id="m_delete${loop.count}"
-							style="float: left; width: 45%; height: 42px; margin: 4px; background: #FFE08C; border-radius: 5px;" onclick="removeCheck()"></form>
+							<form action="menu_delete?menu_id=${mlist.menu_id }" id="removefrm${loop.count}" method="post"><input type="button" value="삭제" id="m_delete${loop.count}"
+							style="float: left; width: 45%; height: 42px; margin: 4px; background: #FFE08C; border-radius: 5px;" onclick="removeCheck('removefrm${loop.count}')"></form>
 						</div>	
 					</div>
 				</c:forEach>
@@ -294,15 +298,19 @@ body {
 				</div>
 			</div>
 		</div>
-	
-</body>
+	<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 		<script>
-		function removeCheck() {
+		function removeCheck(id) {
+			var id_num = id;
 	 		if (confirm("삭제하시겠습니까??") == true){    //확인
-     		document.removefrm.submit();
+     		document.getElementById("removefrm"+id).submit();
  			}else{   //취소
     		 return false;
  			}
 		}
-		</script>			
+		</script>	
+</body>
+				
 </html>

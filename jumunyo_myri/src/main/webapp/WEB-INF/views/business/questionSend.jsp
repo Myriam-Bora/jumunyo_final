@@ -57,6 +57,10 @@ body {
 .filebox {
 	margin: 0 250px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/questionSend.css">
 </head>
@@ -95,14 +99,14 @@ body {
 					</div>
 					<div style="margin: 0 250px;"><b>문의 내용</b></div>					
 					<div class="textarea">					
-						<textarea name="question_context" cols="30" rows="10" style="width: 300px; height: 50px;" 
+						<textarea name="question_content" cols="30" rows="10" style="width: 300px; height: 50px;" 
 						placeholder="내용을 작성 해주세요" ></textarea>			
 					</div>
-					<input type="hidden" value="${uvo.user_id }" name="user_id_send">
+					<input type="hidden" value="${userSession.user_id }" name="user_id_send">
 					<input type="hidden" value="0" name="user_id_receive">
-					<input type="hidden" value="답변안함" name="question_check">
+					<input type="hidden" value="답변대기" name="question_check">
 					<div class="quest-submit">
-						<input type="submit" value="문의 답변" 
+						<input type="submit" value="문의하기" 
 						style="width: 300px; height: 30px; background: red; border-radius: 5px;" />
 						<br />
 						<br />
@@ -113,5 +117,8 @@ body {
 				</div>
 				</div>
 				</div>
+				<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

@@ -332,45 +332,41 @@
 		<h1 align="center">리뷰</h1>
 	</div>
 	<div class="starpoint">
-		<% double starPoint = 3.5; %>
-		<b><%=starPoint %></b> <!-- 여기는 별점수 출력-->
+		<b>${getOneStore.restaurant_grade}</b> <!-- 여기는 별점수 출력-->
+		<%
+		double restaurant_grade1 = res1.getRestaurant_grade();
+		%>
 		<br />
-		<% if(starPoint>=5.0) {%>
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<%} else if(starPoint>=4.0) {%>
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<%} else if(starPoint>=3.0) {%>
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<%} else if(starPoint>=2.0) {%>
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star2.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<%} else if(starPoint>=1.0) {%>
+		<%if(restaurant_grade1 <= 1.0) {%>	
 		<img src="resources/image/star2.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
-		<%} else {%>
+		<%} else if(restaurant_grade1 <= 2.0) {%>			
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
+		<%} else if(restaurant_grade1 <= 3.0) {%>
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
 		<img src="resources/image/star1.png" width="50px" height="50px" />
+		<%} else if(restaurant_grade1 <= 4.0) {%>
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star1.png" width="50px" height="50px" />
+		<%} else if(restaurant_grade1 <= 5.0) {%>
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
+		<img src="resources/image/star2.png" width="50px" height="50px" />
 		<%} %>
  	</div>
 	<div class="review-count">

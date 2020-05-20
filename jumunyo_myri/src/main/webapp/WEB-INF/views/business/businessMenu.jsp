@@ -116,7 +116,7 @@ body {
 }
 .logo {
 	float: left;
-	margin: 25px 70px;
+	margin: 25px 75px;
 	background: white;
 	width: 150px;
 	height: 180px;
@@ -129,11 +129,7 @@ body {
 	width: 150px;
 	height: 150px;
 }
-.footer {
-	width: 100%;
-	
-	border-top: 2px solid black;
-}
+
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/businessmenu.css">
 </head>
@@ -215,8 +211,6 @@ body {
 
             setInterval(volgendefoto, 3000);
         </script>
-        <div class="footer">
-		<jsp:include page="../include/businessFooter.jsp"/>
-		</div>
+        
 </body>
 </html>

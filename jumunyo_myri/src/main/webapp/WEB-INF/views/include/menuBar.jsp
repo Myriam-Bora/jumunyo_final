@@ -55,6 +55,12 @@ body {
 	width:120px;
 	background: #B2CCFF;
 }
+.roommodify {
+	margin: 0 10px 10px 12px;
+	padding: 10px 20px 10px 20px;
+	width:120px;
+	background: #B2CCFF;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/resources/CSS/menuBar.css">
 </head>
@@ -117,6 +123,9 @@ body {
 				} 					
 			}
 		</script>
+		</div>
+		<div class="roommodify" style="background: #8EA8DB;" onmouseover="this.style.background='#C4DEFF'" onmouseout="this.style.background='#8EA8DB'">
+		<div><a href="go_roomlist" style="text-decoration: none;color: black;"><b>좌석관리</b></a></div>	
 		</div>
 	</div>
 

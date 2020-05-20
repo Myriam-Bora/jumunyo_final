@@ -53,6 +53,10 @@ td {
 	margin: 0 90%;
 	font-size: 20px;
 }
+.footer {
+	border-top: 2px solid black;
+	margin: 20px 0;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/reservationList.css">
 <script
@@ -142,6 +146,9 @@ td {
 			</div>
 		</div>
 	</div>
+	<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 					
 </html>
