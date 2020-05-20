@@ -43,7 +43,7 @@
 	<h2>로그인에 실패하셨습니다.</h2>
 	<div id='showDate'></div>
 	<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-	<a href="">홈으로 이동합니다</a>
+	<a href="Index.do">홈으로 이동합니다</a>
 	</div>
 	
 	

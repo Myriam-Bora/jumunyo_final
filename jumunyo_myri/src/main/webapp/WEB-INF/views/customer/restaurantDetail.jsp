@@ -8,6 +8,7 @@
 <%@page import="com.finalp.jumunyo.vo.RestaurantVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -149,7 +150,7 @@
 	width: 80%;
 	font-size: 20px;
 }
-.reply {
+.reply { 
 	width: 50%;
 	margin: 10px 25% 0 25%;
 	height: auto;
@@ -325,11 +326,6 @@
 				
 				<%} %>
 			</div>
-			<%-- <%for(int i=0; i<menu_list1.size(); i++) {%>
-			<%count1++; %>
-			<a href="#slide-<%=count1%>" style=""><%=menu_list1.get(i).getMenu_name() %><!-- 여기는 메뉴이름 출력 --></a> 
-			
-			<%} %> --%>
 		</div>
 	</div>
 	<div class="reviewtitle">
@@ -472,7 +468,22 @@
 	
 	<%} %>
 		<div class="paging">
-			
+			<c:if test="${paging.startPage != 1 }">
+						<a href="restaurant_detail.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+					</c:if>
+						<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+							<c:choose>
+								<c:when test="${p == paging.nowPage }">
+									<b>${p }</b>
+								</c:when>
+								<c:when test="${p != paging.nowPage }">
+									<a href="restaurant_detail.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+								</c:when>
+							</c:choose>
+						</c:forEach>
+					<c:if test="${paging.endPage != paging.lastPage}">
+						<a href="restaurant_detail.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+					</c:if>
 		</div>
 <script>
 	function menuon(id) {
@@ -513,11 +524,10 @@
 			<h2>지도</h2>
 		</div>
 		<div class="res-address">
-		<script>
+		<!-- <script>
 		var restaurant_address = getRestaurant_address();
-		</script>
+		</script> -->
 		<br>주소 :  ${getOneStore.restaurant_address}
-		<%-- 	주소 : <%=res1.getRestaurant_address() %> --%>
 		
 		<!-- 지도 aip -->
 		<!-- 사업자 등록시 입력했던 주소값을 기초로 api에 담아야한다 -->

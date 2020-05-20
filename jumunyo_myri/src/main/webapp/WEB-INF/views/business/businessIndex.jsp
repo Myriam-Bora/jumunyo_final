@@ -44,6 +44,12 @@ body {
 	margin: 0 100px;
 	line-height:300px;
 }
+.footer {
+	width: 100%;
+	position: absolute;
+	top: 940px;
+	border-top: 2px solid black;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="/resources/CSS/businessIndex.css">
 </head>
@@ -74,6 +80,9 @@ body {
 	</div>
 	</a>
 	</c:if>
+	<div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
  <script type = "text/javascript">
             var image = document.getElementById("image");

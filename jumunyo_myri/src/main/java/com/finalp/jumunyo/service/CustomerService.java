@@ -137,7 +137,9 @@ public interface CustomerService {
 
 	public ArrayList<MenuVO> getStoreMenu(int restaurant_id);
 
-	public ArrayList<ReviewVO> getStoreReview(int restaurant_id);
+	public int review_list_count(RestaurantVO rvo);
+	
+	public ArrayList<ReviewVO> getStoreReview(PagingVO pgvo,int restaurant_id);
 
 	public HashMap<String, ReplyVO> getReviewReply(List<ReviewVO> review_list1);
 

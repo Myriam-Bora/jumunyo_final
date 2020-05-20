@@ -2,6 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="com.finalp.jumunyo.vo.UserVO"%>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -115,13 +116,15 @@
 		<div class="reservatInfos">
 		<br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<b>주문자</b> <input type="text" name="reservater" value="<%=user1.getUser_name() %>" disabled="disabled" 
-			style="background: white; border: 1px fuchsia #EAEAEA; font-size: 20px;"/>
+			<b>주문자</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <input type="text" name="reservater" value="<%=user1.getUser_name() %>" disabled="disabled" 
+			style="background: white; border:none; font-size: 20px;"/>
 			<br />
 			<br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
-			<b>연락처</b> <input type="text" name="tel" value="<%=user1.getUser_tell()%>" disabled="disabled" 
-			style="background: white; border: 1px fuchsia #EAEAEA; font-size: 20px;"/>
+			<b>연락처</b> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" name="tel" value="<%=user1.getUser_tell()%>" disabled="disabled" 
+			style="background: white; border: none;"/>
 			<br />
 			<br />
 		<% String time = (String)seat_order1.get("time");
@@ -129,8 +132,8 @@
 			seat_order1.put("time", "해당사항 없음");
 		} %>	
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<b>예약날짜</b> <input type="text" name="time" value="<%=seat_order1.get("time") %>" disabled="disabled" 
-			style="background: white; border: 1px fuchsia #EAEAEA; font-size: 20px;"/>
+			<b>예약날짜</b>&nbsp;&nbsp; <input type="text" name="time" value="<%=seat_order1.get("time") %>" disabled="disabled" 
+			style="background: white; border: none; font-size: 20px;"/>
 			<br />
 			<br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -167,7 +170,7 @@
 			<div class="orderlists">
 				<% for (int i=0; i<cart_list1.size(); i++) { %>				
 				<div class="menuName"><b><%=cart_list1.get(i).getCartmenu_name() %></b></div>
-				<div class="menuPrice"><%=cart_list1.get(i).getCartmenu_price() %> 원</div>
+				<div class="menuPrice"><fmt:formatNumber value='<%=cart_list1.get(i).getCartmenu_price()  %>' type='currency'/>원</div>
 				<div class="menuCount"><%=cart_list1.get(i).getCartmenu_count() %> EA</div>
 				<% total_price += cart_list1.get(i).getCartmenu_price() * cart_list1.get(i).getCartmenu_count(); %>
 				<hr />
@@ -183,7 +186,7 @@
 				style="width: 30px; text-align: right; font-size: 19px;"/> ,00 
 				<a>보유마일리지: 
 				<input type="text" id="myMileage" value="<%=user1.getUser_point() %>" 
-				style="border: none; background: white; width: 50px; text-align: center;" />
+				style="border: none; background: white; width: 50px; text-align: center;" disabled="disabled" />
 				  point </a>
 				  <input type="hidden" id="myMileagehidden" value="<%=user1.getUser_point() %>" />
 				<br />				
@@ -211,7 +214,8 @@
 			</div>
 			<div class="finaltotal">
 			<b style="color: red; font-size: 25px;">최종 금액 </b>
-			<input type="text" id="finaltotal" value="<%=total_price %>" 
+
+			<input type="text" id="finaltotal" value="<fmt:formatNumber value='<%=total_price %>' type='currency'/>"
 			style="border: none; background: white; color: red; font-size: 20px;width: 70px;" />
 			<b style="color: red; font-size: 25px;">원</b>
 			</div>
@@ -263,7 +267,7 @@ function removeCheck() {
 				submit1.disabled = true;
 			} else {
 				document.getElementById('sale').value=inputNum*100;
-				document.getElementById('finaltotal').value= orderAmountNum-inputNum;
+				document.getElementById('finaltotal').value= orderAmountNum-inputNum*100;
 				document.getElementById('submit1').style.background ="red";
 				document.getElementById('submit1').style.color ="blue";
 				document.getElementById('myMileage').value= myMileagehiddenNum-inputNum*100;

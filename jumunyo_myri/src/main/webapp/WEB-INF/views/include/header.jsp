@@ -600,11 +600,11 @@ div.rememberme {
     				<div class="input-name input-margin">
       				<h2>비밀번호</h2>
     				</div>
-    				<input type="text" name="user_password" id="user_password" value="" class="field-input" />
+    				<input type="password" name="user_password" id="user_password" value="" class="field-input" />
 					<div class="input-name input-margin">
       				<h2>비밀번호 확인</h2>
     				</div>
-    				<input type="text" name="user_passwordCheck" id="user_passwordCheck" value="" class="field-input" />
+    				<input type="password" name="user_passwordCheck" id="user_passwordCheck" value="" class="field-input" />
     					 <span id="passwordChk"></span><!-- div 태그안에 ajax 경고문이 들어갈 공간 -->
     				<div class="input-name input-margin">
       				<h2>이름</h2>
@@ -623,10 +623,10 @@ div.rememberme {
       				<h2>주소</h2>
     				</div>
     				<input type="text" name="user_address" id="user_address" value="" class="field-input" />
-    				<input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+    				<!-- <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
 				<div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
 				<div id="map1" style="width:250px;height:250px;"></div>
-				<!--주소 api  -->
+				주소 api 
 				<script>
 					var mapContainer = document.getElementById('map1'), // 지도를 표시할 div
 					mapOption = {
@@ -683,7 +683,7 @@ div.rememberme {
 									}
 								}).open();
 					}
-				</script>
+				</script> -->
 		            		<input type="submit" value="회원가입" class="submit-btn" />
   					</div>
 					</div>

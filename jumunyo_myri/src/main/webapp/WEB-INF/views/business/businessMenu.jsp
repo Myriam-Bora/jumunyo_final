@@ -129,6 +129,11 @@ body {
 	width: 150px;
 	height: 150px;
 }
+.footer {
+	width: 100%;
+	
+	border-top: 2px solid black;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/businessmenu.css">
 </head>
@@ -193,8 +198,9 @@ body {
 		<div class="logoimg">
 		<jsp:include page="../include/logo.jsp" />
 		</div>
-		</div>
+		</div>	
 	</div>
+	
         <script type = "text/javascript">
             var image = document.getElementById("image");
             var currentPos = 0;
@@ -209,5 +215,8 @@ body {
 
             setInterval(volgendefoto, 3000);
         </script>
+        <div class="footer">
+		<jsp:include page="../include/businessFooter.jsp"/>
+		</div>
 </body>
 </html>

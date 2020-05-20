@@ -572,18 +572,29 @@ public class CustomerController {
 	//<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 이종명 start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
  	
 		@RequestMapping("restaurant_detail.do")
-		public String restaurantDetail(HttpSession session,RestaurantVO rvo, Model model) {
-					
+		public String restaurantDetail(HttpSession session,RestaurantVO rvo, Model model, PagingVO pagingVO, @RequestParam(value = "nowPage", required=false) String nowPage, @RequestParam(value = "cntPerPage", required=false) String cntPerPage) {
+			
 			RestaurantVO res1 = (RestaurantVO)service.getOneStore(rvo.getRestaurant_id());
 			ArrayList<MenuVO> menu_list1 = service.getStoreMenu(res1.getRestaurant_id());
-			ArrayList<ReviewVO> review_list1 = service.getStoreReview(res1.getRestaurant_id());
+			int total = service.review_list_count(rvo);
+			if(nowPage == null && cntPerPage == null) {
+				nowPage = "1";
+				cntPerPage = "5";
+			} else if(nowPage == null) {
+				nowPage = "1";
+			} else if(cntPerPage == null) {}
+				cntPerPage = "5";
+			pagingVO = new PagingVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+			ArrayList<ReviewVO> review_list1 = service.getStoreReview(pagingVO,res1.getRestaurant_id());
 			HashMap<String, ReplyVO> reply_list1 = service.getReviewReply(review_list1);
+			
 			session.setAttribute("getOneStore", res1);
 			session.setAttribute("getStoreMenu", menu_list1);
 			session.setAttribute("getStoreReview", review_list1);
 			session.setAttribute("getReviewReply", reply_list1);
 			session.setAttribute("storeSession", res1);
 			
+			model.addAttribute("paging", pagingVO);
 			model.addAttribute("res11", res1);
 			System.out.println("latitude : " + res1.getLatitude());
 			

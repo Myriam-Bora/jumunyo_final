@@ -426,8 +426,23 @@
  	</select>
  	
  	<select id="getStoreReview" resultMap="reviewmap" parameterType="int">
- 		SELECT * FROM reviews WHERE restaurant_id= #{restaurant_id}
+ 		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT *
+							FROM reviews
+							WHERE restaurant_id = #{restaurant_id}
+							ORDER BY review_date DESC
+						 ) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
  	</select>
+ 	
+ 	<select id="review_list_count" resultType="int">
+		SELECT COUNT(*) FROM reviews
+		WHERE restaurant_id = #{value}
+	</select>
  	
  	<select id="getReviewReply" resultMap="replymap" parameterType="int">
  		SELECT * FROM replies WHERE review_id= #{review_id}

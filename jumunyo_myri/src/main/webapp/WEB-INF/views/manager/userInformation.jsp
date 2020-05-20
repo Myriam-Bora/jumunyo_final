@@ -60,7 +60,7 @@
 		입점 신청 날짜 : <input type="text" value="${restaurants.restaurant_date}"/> <br>
 	</c:if>
 
-<a href="/search/userList">돌아가기</a>
+<a href="/jumunyo/userList">돌아가기</a>
 
 </body>
 </html>

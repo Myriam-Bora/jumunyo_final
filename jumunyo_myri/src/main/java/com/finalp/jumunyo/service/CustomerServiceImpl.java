@@ -273,6 +273,7 @@ public class CustomerServiceImpl implements CustomerService {
 		return seatOrderListVo;
 	}
 	
+	
 	//과거내용내역 페이지 - orders 테이블 뽑기
 	@Override
 	public List<OrderVO> myPageOrderHistory(UserVO uvo) {
@@ -561,16 +562,28 @@ public class CustomerServiceImpl implements CustomerService {
 		}
 
 		@Override
-		public ArrayList<ReviewVO> getStoreReview(int restaurant_id) {
+		public ArrayList<ReviewVO> getStoreReview(PagingVO pgvo,int restaurant_id) {
 			
-			List<ReviewVO> review_list1 = my.selectList("Customer.getStoreReview", restaurant_id);
+			HashMap<String, Object> imsi = new HashMap<>();
+			imsi.put("start", pgvo.getStart());
+			imsi.put("end", pgvo.getEnd());
+			imsi.put("restaurant_id", restaurant_id);
 			
-			return (ArrayList<ReviewVO>)review_list1;
+			List<ReviewVO> rvlist = my.selectList("Customer.getStoreReview",imsi);
+			
+			/*List<ReviewVO> review_list1 = my.selectList("Customer.getStoreReview", restaurant_id);*/
+			
+			return  (ArrayList<ReviewVO>)rvlist;
 		}
 		
+		public int review_list_count(RestaurantVO rvo) {
+			// 매장 id값으로 해당 리뷰 글 페이징 카운트
+			return my.selectOne("Customer.review_list_count",rvo.getRestaurant_id());
+		}
 
 		@Override
-		public HashMap<String, ReplyVO> getReviewReply(List<ReviewVO> review_list1) {
+		public HashMap<String, ReplyVO> getReviewReply( List<ReviewVO> review_list1) {
+			
 			
 			HashMap<String, ReplyVO> reply_list1 = new HashMap<String, ReplyVO>();
 			ReplyVO vo1 = null;
