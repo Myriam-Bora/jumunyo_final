@@ -226,7 +226,7 @@
 				<a><fmt:formatDate value="${orderList2.order_date}" pattern="yyyy년 MM월 dd일 HH:mm"/></a>
 				</div>
 				<div class="price">
-				<a>${orderList2.order_price}</a> <!-- 여기는 금액 출력하는곳 -->
+				<a><fmt:formatNumber value="${orderList2.order_price}" type="currency"/></a> <!-- 여기는 금액 출력하는곳 -->
 				</div>
 				<div class="review">
 					<c:choose>

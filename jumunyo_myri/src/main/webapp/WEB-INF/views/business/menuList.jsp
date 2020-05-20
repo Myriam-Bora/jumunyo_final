@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -256,7 +257,7 @@ body {
 							style="width: 98%; height: 90%; background: white; border: none;">
 						</div>	
 						<div class="title">
-							<input type="text" value="${mlist.menu_price }" name="menu_price" disabled="disabled"
+							<input type="text" value="<fmt:formatNumber value="${mlist.menu_price }" type="currency"/>" name="menu_price" disabled="disabled"
 							style="width: 98%; height: 90%; background: white; border: none;">
 						</div>						
 						<div class="trans-kinds">
@@ -265,8 +266,8 @@ body {
 						<div class="created">
 							<form action="go_menu_modify?menu_id=${mlist.menu_id }" method="post"><input type="submit" value="수정" id="m_modify${loop.count}"
 							style="float: left; width: 45%; height: 42px; margin: 4px; background: #00D8FF; border-radius: 5px;"></form>
-							<form action="menu_delete?menu_id=${mlist.menu_id }" method="post"><input type="submit" value="삭제" id="m_delete${loop.count}"
-							style="float: left; width: 45%; height: 42px; margin: 4px; background: #FFE08C; border-radius: 5px;"></form>
+							<form action="menu_delete?menu_id=${mlist.menu_id }" name="removefrm" method="post"><input type="button" value="삭제" id="m_delete${loop.count}"
+							style="float: left; width: 45%; height: 42px; margin: 4px; background: #FFE08C; border-radius: 5px;" onclick="removeCheck()"></form>
 						</div>	
 					</div>
 				</c:forEach>
@@ -295,5 +296,13 @@ body {
 		</div>
 	
 </body>
-					
+		<script>
+		function removeCheck() {
+	 		if (confirm("삭제하시겠습니까??") == true){    //확인
+     		document.removefrm.submit();
+ 			}else{   //취소
+    		 return false;
+ 			}
+		}
+		</script>			
 </html>

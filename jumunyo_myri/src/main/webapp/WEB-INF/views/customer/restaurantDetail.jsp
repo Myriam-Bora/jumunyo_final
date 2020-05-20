@@ -140,7 +140,7 @@
 }
 .review-img {
 	margin: 0 2%;
-	width: 90%;
+	width: 40%; 
 	height: 200px;
 	border: 1px solid #BDBDBD;
 }
@@ -310,7 +310,7 @@
 				<%for(int i=0; i<menu_list1.size(); i++) {%>
 				<%count2++; %>
 				<div id="slide-<%=count2%>" > <!-- 여기는 메뉴이미지,메뉴이름,메뉴가격 출력 -->
-				<img src="resources/image/Chicken.png" style="padding: 5px"/>
+				<img src="resources/image/Chicken.png" height="180px" style="padding: 5px"/>
 				<ul style="padding: 0; margin: 0; list-style-type: none;">
 				<li id="id<%=count2 %>" style="display: none;"><%=menu_list1.get(i).getMenu_id() %></li> 
 				<li id="name<%=count2 %>"><%=menu_list1.get(i).getMenu_name() %></li> 
@@ -325,11 +325,11 @@
 				
 				<%} %>
 			</div>
-			<%for(int i=0; i<menu_list1.size(); i++) {%>
+			<%-- <%for(int i=0; i<menu_list1.size(); i++) {%>
 			<%count1++; %>
-			<a href="#slide-<%=count1%>"><%=menu_list1.get(i).getMenu_name() %><!-- 여기는 메뉴이름 출력 --></a> 
+			<a href="#slide-<%=count1%>" style=""><%=menu_list1.get(i).getMenu_name() %><!-- 여기는 메뉴이름 출력 --></a> 
 			
-			<%} %>
+			<%} %> --%>
 		</div>
 	</div>
 	<div class="reviewtitle">
@@ -472,14 +472,7 @@
 	
 	<%} %>
 		<div class="paging">
-			<a href="#" id="s1" onmouseover="menuon('s1');" onmouseout="menuoff('s1');">&laquo;</a>
-  			<a href="#" id="s2" onmouseover="menuon('s2');" onmouseout="menuoff('s2');">1</a>
-  			<a href="#" id="s3" onmouseover="menuon('s3');" onmouseout="menuoff('s3');">2</a>
-  			<a href="#" id="s4" onmouseover="menuon('s4');" onmouseout="menuoff('s4');">3</a>
-  			<a href="#" id="s5" onmouseover="menuon('s5');" onmouseout="menuoff('s5');">4</a>
-  			<a href="#" id="s6" onmouseover="menuon('s6');" onmouseout="menuoff('s6');">5</a>
-  			<a href="#" id="s7" onmouseover="menuon('s7');" onmouseout="menuoff('s7');">6</a>
-  			<a href="#" id="s8" onmouseover="menuon('s8');" onmouseout="menuoff('s8');">&raquo;</a>
+			
 		</div>
 <script>
 	function menuon(id) {

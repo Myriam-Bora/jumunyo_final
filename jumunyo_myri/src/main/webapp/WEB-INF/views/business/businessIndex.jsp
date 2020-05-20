@@ -52,7 +52,7 @@ body {
 <!-- 사업자 인덱스 페이지 입니다. -->
 	<jsp:include page="../include/businessHeader.jsp" />
 	<div class="advert">
-
+		<img id="image" src="resources/image/adv1.jpg" width="100%" height="100%" >
 	</div>
 	<c:if test="${userSession.user_level == 2}">
 	<a href="goentrance" style="text-decoration: none;">
@@ -75,4 +75,18 @@ body {
 	</a>
 	</c:if>
 </body>
+ <script type = "text/javascript">
+            var image = document.getElementById("image");
+            var currentPos = 0;
+            var images = ["resources/image/adv1.jpg", "resources/image/adv2.jpg", "resources/image/adv3.jpg"]
+
+            function volgendefoto() {
+                if (++currentPos >= images.length)
+                    currentPos = 0;
+
+                image.src = images[currentPos];
+            }
+
+            setInterval(volgendefoto, 3000);
+        </script>
 </html>

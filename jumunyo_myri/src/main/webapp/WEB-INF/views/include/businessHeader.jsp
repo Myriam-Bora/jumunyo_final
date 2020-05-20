@@ -14,7 +14,8 @@ body {
 .header {
 	width: 100%;
 	height: 50px;
-	background: linear-gradient(to bottom, #00D8FF, #8C8C8C, #E5D85C);
+	background: #4374D9;
+/* 	background: linear-gradient(to bottom, #00D8FF, #8C8C8C, #E5D85C); */
 }
 
 #logo {
@@ -53,18 +54,20 @@ body {
 #bp {
 	font-size: 20px;
 	font-family: 'Nanum Pen Script', cursive;
+	color: #FFFFF6;
 }
 .res-name {
 	float: left;
 	line-height:50px;
 	font-size: 20px;
 	width: 10%;
+	color: #FFFFF6;
 }
 .operator {
 	float: left;
 	width:10%;
 	line-height:50px; 
-	
+	color: #FFFFF6;
 }
 .logout {
 	line-height:50px;
@@ -82,7 +85,7 @@ body {
 <body>
 	<div class="header">
 			<div id="logo" onmouseover="logo1();" onmouseout="logo2();">
-				<a href="Index.do" style="text-decoration: none;"> 
+				<a href="start.jsp" style="text-decoration: none;"> 
 					<b id="a1">주</b> 
 					<b id="a2">문</b> 
 					<b id="a3">이</b> 
@@ -91,7 +94,7 @@ body {
 				</a>
 			</div>
 		<div class="res-name">
-			<b>롯대리아 종로지점</b>
+			<b>${rvo.restaurant_name }</b>
 		</div>
 		<div class="operator">
 			<b>운영자</b>

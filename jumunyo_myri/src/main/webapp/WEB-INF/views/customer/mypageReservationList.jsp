@@ -217,7 +217,7 @@
 								<a><fmt:formatDate value="${seatOrderList[status.index].reservation_time}" pattern="yyyy년 MM월 dd일 HH:mm"/></a>				<!-- 여기는 예약시간 출력하는곳 -->
 							</div>
 							<div class="review">
-								<a>${orderList.order_price}</a>
+							<a><fmt:formatNumber value="${orderList.order_price}" type="currency"/></a>
 								<!-- 여기는 금액 출력하는곳 -->
 							</div>
 						</div>
