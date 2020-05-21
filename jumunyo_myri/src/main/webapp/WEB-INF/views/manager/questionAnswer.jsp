@@ -15,6 +15,7 @@
 	글제목 : <input type="text" value="${question.question_title}"/> <br>
 	글내용 : <textarea cols="30" rows="10">${question.question_content}</textarea> <br>
 	글 작성일 : <input type="text" value="${question.question_date}"/>
+	<br /><a href="/jumunyo/answerQuestionList">돌아가기</a>
 	
 	<c:if test="${question.question_check == '답변대기'}">
 	<h1>답글 작성</h1>
@@ -26,7 +27,9 @@
 		이미지 : <input type="text" name="question_image" value="no_image"/> <br>
 		<input type="submit" value="답변하기"/>
 	</form>
+	<br /><a href="/jumunyo/questionList">돌아가기</a>
 	</c:if>
+	
 
 </body>
 </html>

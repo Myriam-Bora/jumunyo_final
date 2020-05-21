@@ -7,6 +7,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+body {
+	background: white;
+}
 .logo {
 	margin: 0 400px;
 }
@@ -49,6 +52,7 @@
 </style>
 </head>
 <body>
+<div style="width: auto; height: auto; background: #000000; color: white;">
 	<div class="logo">
 	<a href="Index.do" style="text-decoration:none;">
 		<b class="a1">주</b>		
@@ -88,7 +92,7 @@
 		 								확인하여 주시기 바랍니다. Copyright JUMOONYIYO. All Rights Reserved.
 		</pre>
 	</div>
-
+</div>
 	
 </body>
 </html>

@@ -216,7 +216,7 @@
 			<b style="color: red; font-size: 25px;">최종 금액 </b>
 
 			<input type="text" id="finaltotal" value="<fmt:formatNumber value='<%=total_price %>' type='currency'/>"
-			style="border: none; background: white; color: red; font-size: 20px;width: 70px;" />
+			style="border: none; background: white; color: red; font-size: 15px;width: 70px;" />
 			<b style="color: red; font-size: 25px;">원</b>
 			</div>
 			<div class="submit">

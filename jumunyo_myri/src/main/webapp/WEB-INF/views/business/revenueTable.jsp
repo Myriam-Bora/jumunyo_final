@@ -42,6 +42,7 @@ body {
 	margin: 0;
 	height: auto;
 	font-size: 25px;
+	background: white;
 }
 .topborder {
 	margin: 0;
@@ -72,6 +73,7 @@ body {
 	margin: 10px 0;
 	width: 99%;
 	border: thick double #FFE400;
+	background: white;
 }
 .grafButton {
 	box-shadow:inset 0px 0px 15px 3px #9fb4f2;

@@ -38,7 +38,7 @@ button {
   text-align: center;
   font-size: 16px;
   color: black;
-  background-color: #00D8FF;
+  background-color: #00D8FF; 
 }
 
 .login-signup-content {
@@ -150,6 +150,9 @@ div.rememberme {
   border: none;
   transition: 0.5s cubic-bezier(0.72, 0.15, 0.53, 0.84);
 }
+.return {
+	margin: 400px 1270px;
+}
 </style>
 </head>
 <body>
@@ -175,6 +178,7 @@ div.rememberme {
 			</div>
 		</div>
 	</form>
+	
 	<div>
 		<c:choose>
 			<c:when test="${mUser_account != null }">	
@@ -236,7 +240,11 @@ div.rememberme {
 			</c:when>
 		</c:choose>
 	</div>
-
-
+	<div class="return">
+<form action="Index.do">
+		<input type="submit" value="메인으로 돌아가기"  
+		style="width:200px; background: #ABF200; padding: 5px 0; border-radius: 20px; color: #FFF; border: none;    "/>
+	</form>
+</div>
 </body>
 </html>

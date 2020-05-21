@@ -519,20 +519,27 @@ public class BusinessServiceImpl implements BusinessService {
 			
 			sdate = date_to_string.format(select_date);
 			String compare_date ="";
+			String standard_date = "";
 			
 			if(cdate.equals("없음")) {
 				compare_date = date_to_string.format(select_date); //새롭게 정제된 cdate
+				standard_date = date_to_string.format(select_date);
 			}else if(cdate.equals("전날")) {
 				select_date.setDate(select_date.getDate()-1); // cdate 를 비교날짜에 맞는 date로 정제
+				standard_date = date_to_string.format(select_date);
 				compare_date = date_to_string.format(select_date);
 			}else if(cdate.equals("일주일")) {
-				select_date.setDate(select_date.getDate()-6);
+				select_date.setDate(select_date.getDate()-1);
+				standard_date = date_to_string.format(select_date);
+				select_date.setDate(select_date.getDate()-5);
 				compare_date = date_to_string.format(select_date);
 			}else if(cdate.equals("한달")) {
-				select_date.setDate(select_date.getDate()-29);
+				select_date.setDate(select_date.getDate()-1);
+				standard_date = date_to_string.format(select_date);
+				select_date.setDate(select_date.getDate()-28);
 				compare_date = date_to_string.format(select_date);
 			}
-			date_values.put("sdate", sdate); 
+			date_values.put("standard_date", standard_date); 
 			date_values.put("compare_date",compare_date);
 			select_values.put("sdate", sdate);
 			

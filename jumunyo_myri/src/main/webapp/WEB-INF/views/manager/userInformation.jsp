@@ -11,7 +11,7 @@
 
 <h1>회원정보</h1>
 
-<form action="<%= request.getContextPath() %>/search/updateUser" method="post">
+<form action="<%= request.getContextPath() %>/updateUser" method="post">
 	회원번호 : <input type="text" name="user_id" value="${user.user_id}"/> <br/>
 	이름 : <input type="text" name="user_name" value="${user.user_name}"/> <br/>
 	아이디 : <input type="text" name="user_account" value="${user.user_account}"/> <br/>

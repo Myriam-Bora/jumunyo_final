@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 
@@ -32,11 +32,11 @@
 <body>
 	<div style="margin: 25%;">
 	<a href="../index.jsp" style="text-decoration:none;">
-		<b class="a1">ֱײ</b>		
-		<b class="a2">¹®</b>
+		<b class="a1">ל£¼</b>		
+		<b class="a2">כ¬¸</b>
 		<br />		
-		<b class="a3">ְּ</b>		
-		<b class="a4">¿ה</b>		
+		<b class="a3">ל´</b>		
+		<b class="a4">ל”</b>		
 	</a>
 	</div>
 

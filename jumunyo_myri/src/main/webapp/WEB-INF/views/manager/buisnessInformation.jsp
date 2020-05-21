@@ -31,6 +31,7 @@
 		입점 신청 날짜 : <input type="text" value="${restaurants.restaurant_date}"/> <br>
 		<input type="submit" value="승인"/>
 	</form>
+	<a href="/jumunyo/businessList">돌아가기</a>
 
 </body>
 </html>

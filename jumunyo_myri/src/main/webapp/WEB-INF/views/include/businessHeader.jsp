@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 body {
@@ -86,24 +86,24 @@ body {
 	<div class="header">
 			<div id="logo" onmouseover="logo1();" onmouseout="logo2();">
 				<a href="start.jsp" style="text-decoration: none;"> 
-					<b id="a1">ÁÖ</b> 
-					<b id="a2">¹®</b> 
-					<b id="a3">ÀÌ</b> 
-					<b id="a4">¿ä</b>
-					<b id="bp">(»ç¾÷ÀÚ ÆäÀÌÁö)</b>
+					<b id="a1">ì£¼</b> 
+					<b id="a2">ë¬¸</b> 
+					<b id="a3">ì´</b> 
+					<b id="a4">ìš”</b>
+					<b id="bp">(ì‚¬ì—…ì í˜ì´ì§€)</b>
 				</a>
 			</div>
 		<div class="res-name">
 			<b>${rvo.restaurant_name }</b>
 		</div>
 		<div class="operator">
-			<b>¿î¿µÀÚ</b>
+			<b>ìš´ì˜ì</b>
 			<a>(</a>			
 			<a href="mypageMenuPage.do" style="text-decoration: none; color: red; font-size: 15px;">${userSession.user_name }</a>
 			<a>)</a>
 		</div>
 		<div class="logout">
-			<a href="logOut.do" style="text-decoration: none; font-size: 20px;"><b>·Î±×¾Æ¿ô</b></a>
+			<a href="logOut.do" style="text-decoration: none; font-size: 20px;"><b>ë¡œê·¸ì•„ì›ƒ</b></a>
 		</div>
 	</div>
 

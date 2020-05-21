@@ -428,7 +428,7 @@
 		<div class="review-menu">
 		주문 메뉴와 수량
 		</div>
-			<img src="resources/image/Pizza.png" class="review-img" />
+			
 		<div class="review-text">
 		<p><%=review_list1.get(i).getReview_content() %></p>
 		</div>

@@ -339,6 +339,7 @@
 			&nbsp;
 			<input type="password" id="user_passwordCheck" name="user_passwordCheck" class="pw3input" value="" /> &nbsp;&nbsp;
 			<input type="submit" class="pwbtn" id="pw1" value="비밀번호 수정" onmouseover="changecolor('pw1');" onmouseout="changeback('pw1');"/>
+			<input type="hidden" name="user_id" value="${sessionScope.userSession.user_id }" />
 		</div>
 		</form>
 		<form action="updateUser.do" method="post">

@@ -1,4 +1,4 @@
-/*package com.finalp.jumunyo.common; 
+package com.finalp.jumunyo.common; 
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,4 +11,4 @@ public class CommonExceptionHandler {
 		return "error/errorPage";
 	}
 	
-}*/
+}

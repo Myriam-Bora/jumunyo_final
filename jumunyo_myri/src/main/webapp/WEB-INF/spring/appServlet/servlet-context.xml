@@ -24,6 +24,7 @@
 			<mapping path="/businessList"/>
 			<mapping path="/businessInformation"/>
 			<mapping path="/businessAcknowledge"/>
+			<mapping path="/main"/>
 			<beans:bean class="com.finalp.jumunyo.common.AuthInterceptor"/>
 		</interceptor>
 	</interceptors>

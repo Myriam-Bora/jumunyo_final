@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
 body {
@@ -177,37 +177,37 @@ body {
 	<jsp:include page="../include/header.jsp" />
 	<div class="category" id="category_menu" >
 		<a href="categorySearch.do"> <span id="s1" onmouseover="menuon('s1');" onmouseout="menuoff('s1');"> 
-		<b>ÀüÃ¼</b> </span></a> 
+		<b>ì „ì²´</b> </span></a> 
 		<a href="categorySearch.do?category_id=1"> <span id="s2" onmouseover="menuon('s2');" onmouseout="menuoff('s2');"> 
-		<b>ÇÁ·»Â÷ÀÌÁî</b> </span></a> 
+		<b>í”„ë Œì°¨ì´ì¦ˆ</b> </span></a> 
 		<a href="categorySearch.do?category_id=2"> <span id="s3" onmouseover="menuon('s3');" onmouseout="menuoff('s3');"> 
-		<b>Ä¡Å²</b> </span></a> 
+		<b>ì¹˜í‚¨</b> </span></a> 
 		<a href="categorySearch.do?category_id=3"> <span id="s4" onmouseover="menuon('s4');" onmouseout="menuoff('s4');"> 
-		<b>ÇÇÀÚ/¾ç½Ä</b> </span></a> 
+		<b>í”¼ì/ì–‘ì‹</b> </span></a> 
 		<a href="categorySearch.do?category_id=4"> <span id="s5" onmouseover="menuon('s5');" onmouseout="menuoff('s5');"> 
-		<b>Áß±¹Áı</b> </span></a> 
+		<b>ì¤‘êµ­ì§‘</b> </span></a> 
 		<a href="categorySearch.do?category_id=5"> <span id="s6" onmouseover="menuon('s6');" onmouseout="menuoff('s6');"> 
-		<b>ÇÑ½Ä</b> </span></a> 
+		<b>í•œì‹</b> </span></a> 
 		<a href="categorySearch.do?category_id=6"> <span id="s7" onmouseover="menuon('s7');" onmouseout="menuoff('s7');"> 
-		<b>ÀÏ½Ä/µ·±î½º</b> </span></a> 
+		<b>ì¼ì‹/ëˆê¹ŒìŠ¤</b> </span></a> 
 		<a href="categorySearch.do?category_id=7"> <span id="s8" onmouseover="menuon('s8');" onmouseout="menuoff('s8');"> 
-		<b>Á·¹ß/º¸½Ó</b> </span></a> 
+		<b>ì¡±ë°œ/ë³´ìŒˆ</b> </span></a> 
 		<a href="categorySearch.do?category_id=8"> <span id="s9" onmouseover="menuon('s9');" onmouseout="menuoff('s9');"> 
-		<b>¾ß½Ä</b> </span></a> 
+		<b>ì•¼ì‹</b> </span></a> 
 		<a href="categorySearch.do?category_id=9"> <span id="s10" onmouseover="menuon('s10');" onmouseout="menuoff('s10');"> 
-		<b>ºĞ½Ä</b> </span></a> 
+		<b>ë¶„ì‹</b> </span></a> 
 		<a href="categorySearch.do?category_id=10"> <span id="s11" onmouseover="menuon('s11');" onmouseout="menuoff('s11');"> 
-		<b>Ä«Æä/µğÀúÆ®</b> </span></a> 
+		<b>ì¹´í˜/ë””ì €íŠ¸</b> </span></a> 
 		<a href="categorySearch.do?category_id=11"> <span id="s12" onmouseover="menuon('s12');" onmouseout="menuoff('s12');"> 
-		<b>±âÅ¸</b> </span></a>
+		<b>ê¸°íƒ€</b> </span></a>
 	</div>
 	<form action="searchSort.do" id="select_form" method="post">
 	<div class="select">
 		<select name="calumn_name" id="suntaek1" style="width: 120px; height: 30px;" onchange="change();" >
-		<option>Á¤·Ä</option> 
-		<option value="restaurant_grade">º°Á¡¼ø</option> 
-		<option value="reviewCount">¸®ºä¸¹Àº¼ø</option> 
-		<option value="restaurant_date">¸ÅÀåµî·Ï³¯Â¥¼ø</option> 		
+		<option>ì •ë ¬</option> 
+		<option value="restaurant_grade">ë³„ì ìˆœ</option> 
+		<option value="reviewCount">ë¦¬ë·°ë§ì€ìˆœ</option> 
+		<option value="restaurant_date">ë§¤ì¥ë“±ë¡ë‚ ì§œìˆœ</option> 		
 		</select>
 		<input type="hidden" name="restaurant_name" id="restaurant_name" value="${mrestaurant_name}" />
 		<c:if test="${mcategory_id != null}">
@@ -228,17 +228,17 @@ body {
 		<div style="float:left; padding: 10px;">
 		<img src="" width="100px" height="100px" /></div>
 		<div class="res_name">
-			<b>${rvolist.restaurant_name }</b> <!-- ¿©±â´Â ¸ÅÀåÀÌ¸§ -->
+			<b>${rvolist.restaurant_name }</b> <!-- ì—¬ê¸°ëŠ” ë§¤ì¥ì´ë¦„ -->
 		</div> <br />
 		<div class="star_img">
 			<img src="resources/image/star2.png" width="15px" height="15px" />
 		</div>
 		<div class="star_point">
-			${rvolist.restaurant_grade} &nbsp;&nbsp;&nbsp;&nbsp;<!-- ¿©±â´Â º°Á¡ -->
-			<a>¸®ºä ${rvoCount[status.index]}</a><!-- ¿©±â´Â ¸®ºä´ñ±Û¼ö -->
+			${rvolist.restaurant_grade} &nbsp;&nbsp;&nbsp;&nbsp;<!-- ì—¬ê¸°ëŠ” ë³„ì  -->
+			<a>ë¦¬ë·° ${rvoCount[status.index]}</a><!-- ì—¬ê¸°ëŠ” ë¦¬ë·°ëŒ“ê¸€ìˆ˜ -->
 			<br />
 			<br />
-			<b style="color: #FF0000;">Ä«Ä«¿À°áÁ¦</b>
+			<b style="color: #FF0000;">ì¹´ì¹´ì˜¤ê²°ì œ</b>
 		</div>
 	</div>
 	</a>
@@ -246,8 +246,8 @@ body {
 		<div class="border2"></div>
 		<div class="paging">
 		
-		<!--ÆäÀÌÂ¡  -->
-		<!--°Ë»ö ÈÄ ÆäÀÌÂ¡ ÇÏ´Â °æ¿ì -->
+		<!--í˜ì´ì§•  -->
+		<!--ê²€ìƒ‰ í›„ í˜ì´ì§• í•˜ëŠ” ê²½ìš° -->
 		<c:if test="${check == 1}">
 			<c:if test="${paging.startPage != 1 }">
 				<a class="pagingA" style="text-decoration:none; font-size: 20px;color: black;" href="searchRestaurantName.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}&restaurant_name=${mrestaurant_name}">&lt;</a>
@@ -269,7 +269,7 @@ body {
 			</c:if>
 		</c:if>
 		
-		<!--Ä«Å×°í¸®¸¦ ´©¸¥ ÈÄ ÆäÀÌÂ¡  -->
+		<!--ì¹´í…Œê³ ë¦¬ë¥¼ ëˆ„ë¥¸ í›„ í˜ì´ì§•  -->
 		<c:if test="${check ==2}">
 			<c:if test="${paging.startPage != 1 }">
 				<div class="paging5" id="page${status.count }" onmouseover="pageon('page${status.count }');" onmouseout="pageoff('page${status.count }');">
@@ -305,7 +305,7 @@ body {
 			</c:if>
 		</c:if>
 		
-		<!--Á¤·ÄÀ» ´©¸¥ ÈÄ ÆäÀÌÂ¡  -->
+		<!--ì •ë ¬ì„ ëˆ„ë¥¸ í›„ í˜ì´ì§•  -->
 		<c:if test="${check ==3}">
 			<c:if test="${paging.startPage != 1 }">
 				<div class="paging7">

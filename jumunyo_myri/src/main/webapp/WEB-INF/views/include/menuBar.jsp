@@ -124,7 +124,7 @@ body {
 			}
 		</script>
 		</div>
-		<div class="roommodify" style="background: #8EA8DB;" onmouseover="this.style.background='#C4DEFF'" onmouseout="this.style.background='#8EA8DB'">
+		<div class="roommodify"  onmouseover="this.style.background='#C4DEFF'" onmouseout="this.style.background='#B2CCFF'">
 		<div><a href="go_roomlist" style="text-decoration: none;color: black;"><b>좌석관리</b></a></div>	
 		</div>
 	</div>

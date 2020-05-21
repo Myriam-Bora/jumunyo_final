@@ -57,6 +57,6 @@
 		<c:if test="${paging.endPage != paging.lastPage}">
 			<a href="userList?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 		</c:if>
-
+		<br> <a href="main">돌아가기</a>
 </body>
 </html>

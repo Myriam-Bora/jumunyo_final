@@ -42,6 +42,11 @@ public class ManagerController {
 		return "manager/managerMain";
 	}
 	
+	@RequestMapping("/main")
+	public String main() {
+		return "manager/managerMain";
+	}
+	
 	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();

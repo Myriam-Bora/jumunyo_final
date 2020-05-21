@@ -64,7 +64,7 @@ b {
 }
 .footer {
 	border-top: 2px solid black;
-	margin: 20px 0;
+	margin: 200px 0;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/reviewList.css">
@@ -81,7 +81,7 @@ b {
 			<h1>${rvo.restaurant_name } 리뷰 관리</h1>	
 		</div>
 		<div>
-			<b>매장 평균 평점 :</b><b style="color: red;"> ${rvo.restaurant_grade }</b> <b>점</b>
+			<b style="font-size: 28px;">매장 평균 평점 :</b><b style="color: red;font-size: 28px;"> ${rvo.restaurant_grade }</b> <b style="font-size: 28px;">점</b>
 		</div>		
 			<div class="orderhistorys">										
 				<c:forEach var="rvlist" items="${rvlist }" varStatus="status">

@@ -385,7 +385,7 @@
  	
  	<select id="menu_sales_graph_compare" parameterType="hashmap" resultMap="ordermap">
  		SELECT * FROM orders
-	 	WHERE order_date between to_date('${compare_date} 00:00:00', 'YY-MM-DD HH24:MI:SS') and to_date('${sdate} 23:59:59', 'YY-MM-DD HH24:MI:SS')
+	 	WHERE order_date between to_date('${compare_date} 00:00:00', 'YY-MM-DD HH24:MI:SS') and to_date('${standard_date} 23:59:59', 'YY-MM-DD HH24:MI:SS')
 	 	AND restaurant_id = #{restaurant_id}
  	</select>
  	

@@ -210,7 +210,7 @@ body {
 }
 .footer {
 	border-top: 2px solid black;
-	margin: 20px 0;
+	margin: 200px 0;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/menuList.css">
@@ -305,7 +305,7 @@ body {
 		function removeCheck(id) {
 			var id_num = id;
 	 		if (confirm("삭제하시겠습니까??") == true){    //확인
-     		document.getElementById("removefrm"+id).submit();
+     		document.getElementById(id_num).submit();
  			}else{   //취소
     		 return false;
  			}

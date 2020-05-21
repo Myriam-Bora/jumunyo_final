@@ -208,7 +208,7 @@ body {
 }
 .footer {
 	border-top: 2px solid black;
-	margin: 20px 0;
+	margin: 200px 0;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="resources/CSS/dealRecord.css">
