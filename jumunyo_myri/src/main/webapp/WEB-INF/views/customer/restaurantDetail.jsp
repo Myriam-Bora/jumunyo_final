@@ -170,12 +170,11 @@
 }
 .paging {
 	width: 50%;
-	margin:0 40%;
-	display: inline-block;
+	margin:0 70%;
+	
 }
 .paging> a {
 	color: black;
-  	float: left;
   	padding: 8px 16px;
   	text-decoration: none;
   	margin: -10px;
@@ -238,6 +237,7 @@
 	overflow-y: auto;
 	height: 300px;
 	margin: 3px 5px 3px 5px;
+	background: white;
 }
 .order::-webkit-scrollbar {
 	width: 10px;
@@ -311,7 +311,7 @@
 				<%for(int i=0; i<menu_list1.size(); i++) {%>
 				<%count2++; %>
 				<div id="slide-<%=count2%>" > <!-- 여기는 메뉴이미지,메뉴이름,메뉴가격 출력 -->
-				<img src="resources/image/Chicken.png" height="180px" style="padding: 5px"/>
+				<img src="resources/image/<%=menu_list1.get(i).getMenu_image()%>" height="180px" style="padding: 5px"/>
 				<ul style="padding: 0; margin: 0; list-style-type: none;">
 				<li id="id<%=count2 %>" style="display: none;"><%=menu_list1.get(i).getMenu_id() %></li> 
 				<li id="name<%=count2 %>"><%=menu_list1.get(i).getMenu_name() %></li> 
@@ -448,7 +448,7 @@
 	
 	<div class="reply" style="display: <%= display1%>">
 		<div class="arrow">
-			<img src="resources/image/arrow.png" width="15px" height="15px"/>
+			<a style="font-size: 30px;">&crarr; <br /></a>
 		</div>
 		<div class="buisnessman">
 		사장님
@@ -465,7 +465,7 @@
 	<%} %>
 		<div class="paging">
 			<c:if test="${paging.startPage != 1 }">
-						<a href="restaurant_detail.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+						<a href="restaurant_detail.do?restaurant_id=<%=res1.getRestaurant_id() %>&nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
 					</c:if>
 						<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
 							<c:choose>
@@ -473,12 +473,12 @@
 									<b>${p }</b>
 								</c:when>
 								<c:when test="${p != paging.nowPage }">
-									<a href="restaurant_detail.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+									<a href="restaurant_detail.do?restaurant_id=<%=res1.getRestaurant_id() %>&nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
 								</c:when>
 							</c:choose>
 						</c:forEach>
 					<c:if test="${paging.endPage != paging.lastPage}">
-						<a href="restaurant_detail.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+						<a href="restaurant_detail.do?restaurant_id=<%=res1.getRestaurant_id() %>&nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 					</c:if>
 		</div>
 <script>

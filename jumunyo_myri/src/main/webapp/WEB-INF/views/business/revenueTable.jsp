@@ -101,7 +101,7 @@ body {
 }
 .footer {
 	border-top: 2px solid black;
-	margin: 900px 0 0 0;
+	margin: 980px 0 0 0;
 }
 </style>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -192,8 +192,7 @@ body {
 									
 									<tr>
 										<td class="tr2">
-										<img src="../image/Korea.png" alt="" width="100%" height="100px"/>
-										${top.value[4]}
+										<img src="resources/image/${top.value[4]}" alt="" width="100px" height="100px"/>
 										</td>
 									</tr>
 									

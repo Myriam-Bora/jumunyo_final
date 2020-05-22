@@ -168,12 +168,14 @@
 		<div class="orderlist">
 			<h1>주문표</h1>
 			<div class="orderlists">
-				<% for (int i=0; i<cart_list1.size(); i++) { %>				
+				<% for (int i=0; i<cart_list1.size(); i++) { %>	
+				<% if(cart_list1.get(i).getCartmenu_count()!= 0) { %>			
 				<div class="menuName"><b><%=cart_list1.get(i).getCartmenu_name() %></b></div>
 				<div class="menuPrice"><fmt:formatNumber value='<%=cart_list1.get(i).getCartmenu_price()  %>' type='currency'/>원</div>
 				<div class="menuCount"><%=cart_list1.get(i).getCartmenu_count() %> EA</div>
 				<% total_price += cart_list1.get(i).getCartmenu_price() * cart_list1.get(i).getCartmenu_count(); %>
 				<hr />
+				<%} %>
 				<%} %>
 			</div>
 		</div>
