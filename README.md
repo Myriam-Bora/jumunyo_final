@@ -1,4 +1,4 @@
-# Project 주문이요
+# Project 주문이요 🍕
 
 ✔ 음식/좌석 예약 웹 서비스
 
@@ -17,48 +17,46 @@
 	▪ 소비자 : 회원가입, 회원정보수정, 주문, 좌석예약, 1:1문의  
 
 
-# Use Technology
+## Use Technology 🛠
 
-✔  담당기능 
+## 담당기능 
 
-        ▪ 자동로그인
+        ✅ 자동로그인
   
-        ▪ 회원가입
+        ✅ 회원가입
 
-        ▪ 회원정보 수정
+        ✅ 회원정보 수정
     
-        ▪ 아이디/비밀번호 찾기
+        ✅ 아이디/비밀번호 찾기
         
-        ▪ 다음지도 API
-✔ 개발환경 
+        ✅ 다음지도 API
+	
+## 개발환경 
 
-         ▪ Window10
-
-
-✔ 사용도구 
-
-          ▪ Eclipse
-  
-          ▪ SqlDeveloper
+![Windows](http://img.shields.io/badge/-Windows-000000?style=flat-square&logo=Windows&logoColor=0078D6)
 
 
-✔ 사용기술
+## 사용도구 / 사용기술
 
-         ▪ Spring Framework
+![Java Spring](https://img.shields.io/badge/-Spring-222222?style=flat&logo=spring&logoColor=6DB33F)
 
-         ▪ JSP 
+![Java](http://img.shields.io/badge/-Java-007396?style=flat-square&logo=java&logoColor=ffffff)
  
-         ▪ Oracle11g
-         
-         ▪ TomCat8.5
-         
-         ▪ HTML5
-  
-         ▪ CSS3
+![Oracle Database](http://img.shields.io/badge/-Oracle-DD0031?style=flat-square&logo=oracle)
+
+![JSP](http://img.shields.io/badge/-JSP-f6f6f6?style=flat-square&logo=java&logoColor=f6f6f6&color=FF8224)
+
+![Tomcat](http://img.shields.io/badge/-Tomcat8.5-000000?style=flat-square&logo=Apache&logoColor=ffffff)
+	         
+![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
+
+![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
+
+![Eclipse](http://img.shields.io/badge/-Eclipse-000000?style=flat-square&logo=eclipse&logoColor=4641D9)
              
          
     
-# Preview 
+## Preview 
 
 	✍ Main
  
