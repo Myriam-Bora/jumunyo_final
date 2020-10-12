@@ -31,6 +31,8 @@
         
         ✅ 다음지도 API
 	
+	✅ 사업자에게 1:1 문의 보내기/
+	
 ## 개발환경 
 
 ![Windows](http://img.shields.io/badge/-Windows-000000?style=flat-square&logo=Windows&logoColor=0078D6)
