@@ -2,7 +2,7 @@
 
 ✔ 음식/좌석 예약 웹 서비스
 
-✔  개발기간 : 2020.04.13 ~ 2020.05.18
+✔  개발기간 : 2020.04.13 ~ 2020.05.18 (1개월)
 
 ✔  인원 : 4명
 
@@ -16,29 +16,27 @@
 		
 	▪ 소비자 : 회원가입, 회원정보수정, 주문, 좌석예약, 1:1문의  
 
-
-## Use Technology 🛠
-
 ## 담당기능 
 
-        ✅ 자동로그인
-  
-        ✅ 회원가입
-
-        ✅ 회원정보 수정
-    
-        ✅ 아이디/비밀번호 찾기
-        
-        ✅ 다음지도 API
+    ✅ 자동로그인
+  	
+    ✅ 회원 관련 CRUD
 	
-	✅ 사업자에게 1:1 문의 보내기/
+    ✅ 주문내역
+        
+    ✅ 카카오지도 API (경도,위도 추출)
+	
+    ✅ 사업자에게 1:1 문의 보내기
+	
+    ✅ 매장 검색
+	
 	
 ## 개발환경 
 
 ![Windows](http://img.shields.io/badge/-Windows-000000?style=flat-square&logo=Windows&logoColor=0078D6)
 
 
-## 사용도구 / 사용기술
+## 사용도구 / 사용기술 🛠
 
 ![Java Spring](https://img.shields.io/badge/-Spring-222222?style=flat&logo=spring&logoColor=6DB33F)
 
@@ -46,17 +44,8 @@
  
 ![Oracle Database](http://img.shields.io/badge/-Oracle-DD0031?style=flat-square&logo=oracle)
 
-![JSP](http://img.shields.io/badge/-JSP-f6f6f6?style=flat-square&logo=java&logoColor=f6f6f6&color=FF8224)
-
 ![Tomcat](http://img.shields.io/badge/-Tomcat8.5-000000?style=flat-square&logo=Apache&logoColor=ffffff)
-	         
-![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
-
-![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
-
-![Eclipse](http://img.shields.io/badge/-Eclipse-000000?style=flat-square&logo=eclipse&logoColor=4641D9)
-             
-         
+	            
     
 ## Preview 
 
@@ -65,10 +54,18 @@
 ![Main](jumunyo_myri/preview/main.png)
 
     
-    🤝 회원가입
+    👨‍👩‍👧‍👧 회원가입
  
 ![join](jumunyo_myri/preview/join.png)
 
 
-    🖼 다음지도 API
+	🔑 로그인
+![login](jumunyo_myri/preview/login.png)
+
+
+	📝 주문내역
+![history](jumunyo_myri/preview/history.png)
+
+
+	🖼 카카오지도 API
 ![map](jumunyo_myri/preview/map.png)
